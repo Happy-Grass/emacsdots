@@ -1,8 +1,11 @@
 /*
 !.gitignore
+!.gitsubmodules
 !.emacs
 !.README.md
 !site-start.el
 !/site-lisp
 /site-lisp/*
-!/site-lisp/config
+!/site-lisp/config/*.el
+!/site-lisp/extensions
+/site-lisp/extensions/emacs-application-framework
