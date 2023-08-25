@@ -1,0 +1,8 @@
+/*
+!.gitignore
+!.emacs
+!.README.md
+!site-start.el
+!/site-lisp
+/site-lisp/*
+!/site-lisp/config

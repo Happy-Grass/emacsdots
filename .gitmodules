@@ -1,0 +1,4 @@
+[submodule "site-lisp/extensions/vs-theme"]
+	path = site-lisp/extensions/vs-theme
+	url = git@github.com:Happy-Grass/vs-theme.git
+	branch = master
