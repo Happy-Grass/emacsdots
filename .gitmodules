@@ -2,3 +2,7 @@
 	path = site-lisp/extensions/vs-theme
 	url = git@github.com:Happy-Grass/vs-theme.git
 	branch = master
+[submodule "site-lisp/extensions/lazy-load"]
+	path = site-lisp/extensions/lazy-load
+	url = git@github.com:manateelazycat/lazy-load.git
+	branch = master

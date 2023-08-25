@@ -19,6 +19,11 @@
               (redisplay)))
   (require 'init-font)
   (require 'init-generic)
+  (require 'lazycat-theme)
+  ;; (lazycat-theme-load-with-sunrise)
+  (lazycat-theme-load-dark)
+  ;; (lazycat-theme-load-light)
+  (require 'lazy-load)
   )
   (provide 'init)
 ;;; init.el ends here.
