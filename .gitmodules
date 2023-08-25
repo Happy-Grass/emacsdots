@@ -10,3 +10,7 @@
 	path = site-lisp/extensions/evil
 	url = git@github.com:emacs-evil/evil.git
 	branch = master
+[submodule "site-lisp/extensions/org-roam"]
+	path = site-lisp/extensions/org-roam
+	url = git@github.com:org-roam/org-roam.git
+	branch = main
