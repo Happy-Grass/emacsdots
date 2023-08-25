@@ -26,6 +26,8 @@
   (require 'lazy-load)
   (require 'evil)
   (evil-mode 1)
+
+  (require 'init-eaf)
   )
   (provide 'init)
 ;;; init.el ends here.

@@ -8,4 +8,3 @@
 /site-lisp/*
 !/site-lisp/config/*.el
 !/site-lisp/extensions
-/site-lisp/extensions/emacs-application-framework

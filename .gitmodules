@@ -14,3 +14,11 @@
 	path = site-lisp/extensions/org-roam
 	url = git@github.com:org-roam/org-roam.git
 	branch = main
+[submodule "site-lisp/extensions/emacs-application-framework"]
+	path = site-lisp/extensions/emacs-application-framework
+	url = git@github.com:emacs-eaf/emacs-application-framework.git
+	branch = master
+[submodule "site-lisp/extensions/vs-modeline"]
+	path = site-lisp/extensions/vs-modeline
+	url = git@github.com:Happy-Grass/vs-modeline.git
+	branch = main
