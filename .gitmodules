@@ -6,3 +6,7 @@
 	path = site-lisp/extensions/lazy-load
 	url = git@github.com:manateelazycat/lazy-load.git
 	branch = master
+[submodule "site-lisp/extensions/evil"]
+	path = site-lisp/extensions/evil
+	url = git@github.com:emacs-evil/evil.git
+	branch = master

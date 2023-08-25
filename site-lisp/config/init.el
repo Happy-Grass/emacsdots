@@ -24,6 +24,8 @@
   (lazycat-theme-load-dark)
   ;; (lazycat-theme-load-light)
   (require 'lazy-load)
+  (require 'evil)
+  (evil-mode 1)
   )
   (provide 'init)
 ;;; init.el ends here.
