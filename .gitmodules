@@ -30,3 +30,7 @@
 	path = site-lisp/extensions/major-mode-hydra
 	url = git@github.com:jerrypnz/major-mode-hydra.el.git
 	branch = master
+[submodule "site-lisp/extensions/nerd-icons"]
+	path = site-lisp/extensions/nerd-icons
+	url = git@github.com:rainstormstudio/nerd-icons.el.git
+	branch = main
