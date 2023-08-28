@@ -46,3 +46,7 @@
 	path = site-lisp/extensions/pyim
 	url = git@github.com:tumashu/pyim.git
 	branch = master
+[submodule "site-lisp/extensions/xr"]
+	path = site-lisp/extensions/xr
+	url = git@github.com:mattiase/xr.git
+	branch = master
