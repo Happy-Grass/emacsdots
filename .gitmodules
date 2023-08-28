@@ -22,3 +22,11 @@
 	path = site-lisp/extensions/org-roam
 	url = git@github.com:org-roam/org-roam.git
 	branch = main
+[submodule "site-lisp/extensions/hydra"]
+	path = site-lisp/extensions/hydra
+	url = git@github.com:abo-abo/hydra.git
+	branch = master
+[submodule "site-lisp/extensions/major-mode-hydra"]
+	path = site-lisp/extensions/major-mode-hydra
+	url = git@github.com:jerrypnz/major-mode-hydra.el.git
+	branch = master
