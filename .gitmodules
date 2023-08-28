@@ -86,3 +86,7 @@
 	path = site-lisp/extensions/avy-menu
 	url = git@github.com:mrkkrp/avy-menu.git
 	branch = master
+[submodule "site-lisp/extensions/avy"]
+	path = site-lisp/extensions/avy
+	url = git@github.com:abo-abo/avy.git
+	branch = master
