@@ -82,3 +82,7 @@
 	path = site-lisp/extensions/ace-popup-menu
 	url = git@github.com:mrkkrp/ace-popup-menu.git
 	branch = master
+[submodule "site-lisp/extensions/avy-menu"]
+	path = site-lisp/extensions/avy-menu
+	url = git@github.com:mrkkrp/avy-menu.git
+	branch = master
