@@ -78,3 +78,7 @@
 	path = site-lisp/extensions/ace-pinyin
 	url = git@github.com:cute-jumper/ace-pinyin.git
 	branch = master
+[submodule "site-lisp/extensions/ace-popup-menu"]
+	path = site-lisp/extensions/ace-popup-menu
+	url = git@github.com:mrkkrp/ace-popup-menu.git
+	branch = master
