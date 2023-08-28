@@ -58,3 +58,7 @@
 	path = site-lisp/extensions/emacs-async
 	url = git@github.com:jwiegley/emacs-async.git
 	branch = master
+[submodule "site-lisp/extensions/popup-el"]
+	path = site-lisp/extensions/popup-el
+	url = git@github.com:auto-complete/popup-el.git
+	branch = master
