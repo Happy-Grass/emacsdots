@@ -38,3 +38,7 @@
 	path = site-lisp/extensions/dash
 	url = git@github.com:magnars/dash.el.git
 	branch = master
+[submodule "site-lisp/extensions/magit"]
+	path = site-lisp/extensions/magit
+	url = git@github.com:magit/magit.git
+	branch = main
