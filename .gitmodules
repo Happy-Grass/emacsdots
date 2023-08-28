@@ -62,3 +62,7 @@
 	path = site-lisp/extensions/popup-el
 	url = git@github.com:auto-complete/popup-el.git
 	branch = master
+[submodule "site-lisp/extensions/compat"]
+	path = site-lisp/extensions/compat
+	url = git@github.com:emacs-compat/compat.git
+	branch = main
