@@ -70,3 +70,7 @@
 	path = site-lisp/extensions/emacsql
 	url = git@github.com:magit/emacsql.git
 	branch = main
+[submodule "site-lisp/extensions/ace-jump-mode"]
+	path = site-lisp/extensions/ace-jump-mode
+	url = git@github.com:winterTTr/ace-jump-mode.git
+	branch = master
