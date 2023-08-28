@@ -90,3 +90,7 @@
 	path = site-lisp/extensions/avy
 	url = git@github.com:abo-abo/avy.git
 	branch = master
+[submodule "site-lisp/extensions/pinyinlib.el"]
+	path = site-lisp/extensions/pinyinlib.el
+	url = git@github.com:cute-jumper/pinyinlib.el.git
+	branch = master
