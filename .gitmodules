@@ -34,3 +34,7 @@
 	path = site-lisp/extensions/nerd-icons
 	url = git@github.com:rainstormstudio/nerd-icons.el.git
 	branch = main
+[submodule "site-lisp/extensions/dash"]
+	path = site-lisp/extensions/dash
+	url = git@github.com:magnars/dash.el.git
+	branch = master
