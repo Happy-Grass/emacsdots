@@ -66,3 +66,7 @@
 	path = site-lisp/extensions/compat
 	url = git@github.com:emacs-compat/compat.git
 	branch = main
+[submodule "site-lisp/extensions/emacsql"]
+	path = site-lisp/extensions/emacsql
+	url = git@github.com:magit/emacsql.git
+	branch = main
