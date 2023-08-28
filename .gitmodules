@@ -42,3 +42,7 @@
 	path = site-lisp/extensions/magit
 	url = git@github.com:magit/magit.git
 	branch = main
+[submodule "site-lisp/extensions/pyim"]
+	path = site-lisp/extensions/pyim
+	url = git@github.com:tumashu/pyim.git
+	branch = master
