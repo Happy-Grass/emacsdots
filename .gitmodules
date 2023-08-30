@@ -98,3 +98,7 @@
 	path = site-lisp/extensions/ewmctrl
 	url = git@github.com:flexibeast/ewmctrl.git
 	branch = master
+[submodule "site-lisp/extensions/general"]
+	path = site-lisp/extensions/general
+	url = git@github.com:noctuid/general.el.git
+	branch = master
