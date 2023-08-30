@@ -6,5 +6,7 @@
 !site-start.el
 !/site-lisp
 /site-lisp/*
-!/site-lisp/config/*
+!/site-lisp/config
 !/site-lisp/extensions
+!/site-lisp/template
+!/site-lisp/snippets
