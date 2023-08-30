@@ -94,3 +94,7 @@
 	path = site-lisp/extensions/emacs-wmctrl
 	url = git@github.com:tkf/emacs-wmctrl.git
 	branch = master
+[submodule "site-lisp/extensions/ewmctrl"]
+	path = site-lisp/extensions/ewmctrl
+	url = git@github.com:flexibeast/ewmctrl.git
+	branch = master
