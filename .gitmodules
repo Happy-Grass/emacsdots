@@ -90,3 +90,7 @@
 	path = site-lisp/extensions/pinyinlib.el
 	url = git@github.com:cute-jumper/pinyinlib.el.git
 	branch = master
+[submodule "site-lisp/extensions/emacs-wmctrl"]
+	path = site-lisp/extensions/emacs-wmctrl
+	url = git@github.com:tkf/emacs-wmctrl.git
+	branch = master
