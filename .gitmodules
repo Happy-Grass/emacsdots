@@ -154,3 +154,7 @@
 	path = site-lisp/extensions/vertico
 	url = git@github.com:minad/vertico.git
 	branch = main
+[submodule "site-lisp/extensions/orderless"]
+	path = site-lisp/extensions/orderless
+	url = git@github.com:oantolin/orderless.git
+	branch = master
