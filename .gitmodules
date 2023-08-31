@@ -134,3 +134,7 @@
 	path = site-lisp/extensions/emacs-web-server
 	url = git@github.com:skeeto/emacs-web-server.git
 	branch = master
+[submodule "site-lisp/extensions/emacs-websocket"]
+	path = site-lisp/extensions/emacs-websocket
+	url = git@github.com:ahyatt/emacs-websocket.git
+	branch = main
