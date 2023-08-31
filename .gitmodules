@@ -146,3 +146,7 @@
 	path = site-lisp/extensions/org-fancy-priorities
 	url = git@github.com:harrybournis/org-fancy-priorities.git
 	branch = master
+[submodule "site-lisp/extensions/popper"]
+	path = site-lisp/extensions/popper
+	url = git@github.com:karthink/popper.git
+	branch = master
