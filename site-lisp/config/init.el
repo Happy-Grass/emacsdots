@@ -29,9 +29,11 @@
   (require 'lazy-load)
   (require 'evil)
   (evil-mode 1)
+  (require 'init-treesit)
   (require 'init-pyim)
   (require 'init-ace)
   (require 'init-eaf)
+  (require 'init-tools)
   )
   (provide 'init)
 ;;; init.el ends here.
