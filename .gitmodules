@@ -110,3 +110,7 @@
 	path = site-lisp/extensions/org-transclusion
 	url = git@github.com:nobiot/org-transclusion.git
 	branch = main
+[submodule "site-lisp/extensions/org-super-agenda"]
+	path = site-lisp/extensions/org-super-agenda
+	url = git@github.com:alphapapa/org-super-agenda.git
+	branch = master
