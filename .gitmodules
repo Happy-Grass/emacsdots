@@ -162,3 +162,7 @@
 	path = site-lisp/extensions/vertico-postframe
 	url = git@github.com:tumashu/vertico-posframe.git
 	branch = main
+[submodule "site-lisp/extensions/posframe"]
+	path = site-lisp/extensions/posframe
+	url = git@github.com:tumashu/posframe.git
+	branch = master
