@@ -130,3 +130,7 @@
 	path = site-lisp/extensions/org-roam-ui
 	url = git@github.com:org-roam/org-roam-ui.git
 	branch = main
+[submodule "site-lisp/extensions/emacs-web-server"]
+	path = site-lisp/extensions/emacs-web-server
+	url = git@github.com:skeeto/emacs-web-server.git
+	branch = master
