@@ -1,6 +1,12 @@
 (require 'org)
 (require 'org-roam)
+(require 'org-modern)
+(require 'org-transclusion) ;嵌入式文档
 
+;;UI, org-modern
+;; Activate org-modern-mode for per buffer
+(add-hook 'org-mode-hook #'org-modern-mode)
+(add-hook 'org-agenda-finalize-hook #'org-modern-agenda)
 
 ;; Agenda
 (setq org-modules nil                 ; Faster loading
