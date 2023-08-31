@@ -2,6 +2,7 @@
 (require 'org-roam)
 (require 'org-modern)
 (require 'org-transclusion) ;嵌入式文档
+(require 'org-super-agenda) ; 漂亮的agenda视图
 
 ;;UI, org-modern
 ;; Activate org-modern-mode for per buffer
@@ -40,7 +41,7 @@
       org-hide-emphasis-markers t)
 
 ;; Org-roam
- (setq org-roam-directory (file-truename xfw-org-roam-home)
+(setq org-roam-directory (file-truename xfw-org-roam-home)
        org-roam-node-display-template (concat "${title:40} " (propertize "${tags:*}" 'face 'org-tag))
        org-roam-database-connector 'sqlite-builtin)
 

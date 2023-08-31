@@ -122,3 +122,7 @@
 	path = site-lisp/extensions/ht
 	url = git@github.com:Wilfred/ht.el.git
 	branch = master
+[submodule "site-lisp/extensions/ts"]
+	path = site-lisp/extensions/ts
+	url = git@github.com:alphapapa/ts.el.git
+	branch = master

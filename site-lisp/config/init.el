@@ -34,6 +34,7 @@
   (require 'init-ace)
   (require 'init-eaf)
   (require 'init-tools)
+  (require 'init-org)
   )
   (provide 'init)
 ;;; init.el ends here.
