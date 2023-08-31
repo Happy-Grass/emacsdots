@@ -150,3 +150,7 @@
 	path = site-lisp/extensions/popper
 	url = git@github.com:karthink/popper.git
 	branch = master
+[submodule "site-lisp/extensions/vertico"]
+	path = site-lisp/extensions/vertico
+	url = git@github.com:minad/vertico.git
+	branch = main
