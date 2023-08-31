@@ -166,3 +166,7 @@
 	path = site-lisp/extensions/posframe
 	url = git@github.com:tumashu/posframe.git
 	branch = master
+[submodule "site-lisp/extensions/rainbow-mode"]
+	path = site-lisp/extensions/rainbow-mode
+	url = git@github.com:emacsmirror/rainbow-mode.git
+	branch = master
