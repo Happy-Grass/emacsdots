@@ -114,3 +114,7 @@
 	path = site-lisp/extensions/org-super-agenda
 	url = git@github.com:alphapapa/org-super-agenda.git
 	branch = master
+[submodule "site-lisp/extensions/s"]
+	path = site-lisp/extensions/s
+	url = git@github.com:magnars/s.el.git
+	branch = master
