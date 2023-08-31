@@ -126,3 +126,7 @@
 	path = site-lisp/extensions/ts
 	url = git@github.com:alphapapa/ts.el.git
 	branch = master
+[submodule "site-lisp/extensions/org-roam-ui"]
+	path = site-lisp/extensions/org-roam-ui
+	url = git@github.com:org-roam/org-roam-ui.git
+	branch = main
