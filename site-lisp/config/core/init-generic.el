@@ -46,12 +46,15 @@
 (setq confirm-kill-processes nil)       ;退出自动杀掉进程
 (setq async-bytecomp-allowed-packages nil) ;避免magit报错
 (setq word-wrap-by-category t)             ;按照中文折行
-;;(add-hook 'find-file-hook 'highlight-parentheses-mode t) ;增强的括号高亮
+(setq make-backup-files nil)               ;不要烦人的备份文件
 
 (setq completion-auto-select nil)       ;避免默认自动选择
 
 (setq ad-redefinition-action 'accept)   ;不要烦人的 redefine warning
 (setq frame-resize-pixelwise t) ;设置缩放的模式,避免Mac平台最大化窗口以后右边和下边有空隙
+(setq frame-title-format
+      '(buffer-file-name (:eval (abbreviate-file-name buffer-file-name))
+         (dired-directory dired-directory "%b"))) ;; 设置title-bar显示文件的全路径
 
 ;; 平滑地进行半屏滚动，避免滚动后recenter操作
 (setq scroll-step 1

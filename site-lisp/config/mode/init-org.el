@@ -3,6 +3,9 @@
 (require 'org-modern)
 (require 'org-transclusion) ;嵌入式文档
 (require 'org-super-agenda) ; 漂亮的agenda视图
+(require 'org-roam-ui)
+(require 'org-timeline)
+(require 'org-fancy-priorities)
 
 ;;UI, org-modern
 ;; Activate org-modern-mode for per buffer
@@ -39,6 +42,49 @@
       org-ellipsis (if (char-displayable-p ?⏷) "\t⏷" nil)
       org-pretty-entities nil
       org-hide-emphasis-markers t)
+;; Super agenda
+(setq org-super-agenda-groups
+       '(;; Each group has an implicit boolean OR operator between its selectors.
+         (:name "Today"  ; Optionally specify section name
+                :time-grid t  ; Items that appear on the time grid
+                :todo "TODAY")  ; Items that have this TODO keyword
+         (:name "Important"
+                ;; Single arguments given alone
+                :tag "bills"
+                :priority "A")
+         ;; Set order of multiple groups at once
+         (:order-multi (2 (:name "Shopping in town"
+                                 ;; Boolean AND group matches items that match all subgroups
+                                 :and (:tag "shopping" :tag "@town"))
+                          (:name "Food-related"
+                                 ;; Multiple args given in list with implicit OR
+                                 :tag ("food" "dinner"))
+                          (:name "Personal"
+                                 :habit t
+                                 :tag "personal")
+                          (:name "Space-related (non-moon-or-planet-related)"
+                                 ;; Regexps match case-insensitively on the entire entry
+                                 :and (:regexp ("space" "NASA")
+                                               ;; Boolean NOT also has implicit OR between selectors
+                                               :not (:regexp "moon" :tag "planet")))))
+         ;; Groups supply their own section names when none are given
+         (:todo "WAITING" :order 8)  ; Set order of this section
+         (:todo ("SOMEDAY" "TO-READ" "CHECK" "TO-WATCH" "WATCHING")
+                ;; Show this group at the end of the agenda (since it has the
+                ;; highest number). If you specified this group last, items
+                ;; with these todo keywords that e.g. have priority A would be
+                ;; displayed in that group instead, because items are grouped
+                ;; out in the order the groups are listed.
+                :order 9)
+         (:priority<= "B"
+                      ;; Show this section after "Today" and "Important", because
+                      ;; their order is unspecified, defaulting to 0. Sections
+                      ;; are displayed lowest-number-first.
+                      :order 1)
+         ;; After the last group, the agenda will display items that didn't
+         ;; match any of these groups, with the default order position of 99
+         ))
+ 
 
 ;; Org-roam
 (setq org-roam-directory (file-truename xfw-org-roam-home)
@@ -93,6 +139,26 @@
 			    "#+TITLE: ${title}\n#+AUTHOR: xfwahss\n#+DATE: %<%Y-%m-%d>\n#+FILETAGS: :tool: \n\n")
 	 :unnarrowed t)
 	))
+;; Org-roam-ui
+(setq org-roam-ui-sync-theme t
+      org-roam-ui-follow t
+      org-roam-ui-update-on-save t
+      org-roam-ui-open-on-start t)
 
+;; Org-timeline
+(add-hook 'org-agenda-finalize-hook 'org-timline-insert-timeline :append)
+
+;; Org-fancy-priorities
+(setq org-fancy-priorities-list '((?A . "❗")
+                                  (?B . "⬆")
+                                  (?C . "⬇")
+                                  (?D . "☕")
+                                  (?1 . "⚡")
+                                  (?2 . "⮬")
+                                  (?3 . "⮮")
+                                  (?4 . "☕")
+                                  (?I . "Important")))
+(add-hook 'org-mode 'org-fancy-priorities-mode)
+(add-hook 'org-agenda-finalize-hook 'org-fancy-priorities-mode)
 (provide 'init-org)
 ;;; init-org.el ends here.
