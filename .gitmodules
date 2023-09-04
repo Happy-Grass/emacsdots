@@ -190,3 +190,7 @@
 	path = site-lisp/extensions/conda
 	url = git@github.com:necaris/conda.el.git
 	branch = main
+[submodule "site-lisp/extensions/pythonic"]
+	path = site-lisp/extensions/pythonic
+	url = git@github.com:pythonic-emacs/pythonic.git
+	branch = master

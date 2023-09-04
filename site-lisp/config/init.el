@@ -24,8 +24,8 @@
   
   (require 'vs-theme)
   (vs-theme-load-dark)
-  (require 'vs-modeline)
-  (vs-modeline-mode)
+  ;(require 'vs-modeline)
+  ;(vs-modeline-mode)
   (require 'lazy-load)
   (require 'evil)
   (evil-mode 1)
