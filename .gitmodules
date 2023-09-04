@@ -194,3 +194,7 @@
 	path = site-lisp/extensions/pythonic
 	url = git@github.com:pythonic-emacs/pythonic.git
 	branch = master
+[submodule "site-lisp/extensions/f.el"]
+	path = site-lisp/extensions/f.el
+	url = git@github.com:rejeep/f.el.git
+	branch = master
