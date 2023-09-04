@@ -24,8 +24,8 @@
   
   (require 'vs-theme)
   (vs-theme-load-dark)
-  ;(require 'vs-modeline)
-  ;(vs-modeline-mode)
+  (require 'vs-modeline)
+  (vs-modeline-mode)
   (require 'lazy-load)
   (require 'evil)
   (evil-mode 1)
@@ -36,6 +36,8 @@
   (require 'init-tools)
   (require 'init-org)
   (require 'init-color)
+  (require 'init-lsp-bridge)
+  (require 'init-python)
   )
   (provide 'init)
 ;;; init.el ends here.

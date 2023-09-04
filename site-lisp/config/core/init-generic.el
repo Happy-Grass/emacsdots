@@ -56,6 +56,11 @@
       '(buffer-file-name (:eval (abbreviate-file-name buffer-file-name))
          (dired-directory dired-directory "%b"))) ;; 设置title-bar显示文件的全路径
 
+;; 设置默认编码为utf－8
+(prefer-coding-system 'utf-8)
+(set-default-coding-systems 'utf-8)
+(set-terminal-coding-system 'utf-8)
+(set-keyboard-coding-system 'utf-8)
 ;; 平滑地进行半屏滚动，避免滚动后recenter操作
 (setq scroll-step 1
       scroll-conservatively 10000)

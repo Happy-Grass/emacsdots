@@ -174,3 +174,19 @@
 	path = site-lisp/extensions/rainbow-delimiters
 	url = git@github.com:Fanael/rainbow-delimiters.git
 	branch = master
+[submodule "site-lisp/extensions/lsp-bridge"]
+	path = site-lisp/extensions/lsp-bridge
+	url = git@github.com:manateelazycat/lsp-bridge.git
+	branch = master
+[submodule "site-lisp/extensions/markdown-mode"]
+	path = site-lisp/extensions/markdown-mode
+	url = git@github.com:jrblevin/markdown-mode.git
+	branch = master
+[submodule "site-lisp/extensions/yasnippet"]
+	path = site-lisp/extensions/yasnippet
+	url = git@github.com:joaotavora/yasnippet.git
+	branch = master
+[submodule "site-lisp/extensions/conda"]
+	path = site-lisp/extensions/conda
+	url = git@github.com:necaris/conda.el.git
+	branch = main
