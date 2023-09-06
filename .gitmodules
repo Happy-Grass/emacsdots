@@ -198,3 +198,7 @@
 	path = site-lisp/extensions/f
 	url = git@github.com:rejeep/f.el.git
 	branch = master
+[submodule "site-lisp/extensions/hydra-posframe"]
+	path = site-lisp/extensions/hydra-posframe
+	url = git@github.com:Ladicle/hydra-posframe.git
+	branch = master

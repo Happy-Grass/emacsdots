@@ -15,6 +15,8 @@
 
 ;; 打开日志，开发者才需要
 ;; (setq lsp-bridge-enable-log t)
+(setq lsp-bridge-python-command "python.exe")
+
 
 (setq lsp-bridge-get-multi-lang-server-by-project
       (lambda (project-path filepath)
