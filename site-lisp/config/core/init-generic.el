@@ -64,8 +64,10 @@
 ;; 平滑地进行半屏滚动，避免滚动后recenter操作
 (setq scroll-step 1
       scroll-conservatively 10000)
-
-
+(add-hook 'prog-mode-hook 'menu-bar--display-line-numbers-mode-relative) ;显示相对行号
+(global-hl-line-mode)  ;高亮当前行
+;(menu-bar-bottom-window-divider) ;分离线，下面的
+(fringe-mode 0)
 (provide 'init-generic)
 
 ;;; init-generic.el ends here

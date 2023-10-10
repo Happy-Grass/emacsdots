@@ -11,7 +11,8 @@
 (setq acm-enable-tabnine nil)
 (setq acm-enable-codeium nil)
 
-(global-lsp-bridge-mode)
+;(global-lsp-bridge-mode)
+(add-hook 'prog-mode 'lsp-bridge-mode)
 
 ;; 打开日志，开发者才需要
 ;; (setq lsp-bridge-enable-log t)

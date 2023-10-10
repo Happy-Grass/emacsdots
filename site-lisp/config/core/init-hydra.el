@@ -1,6 +1,6 @@
 (require 'major-mode-hydra)
-
-
+(require 'hydra-posframe)
+(add-hook 'after-init-hook 'hydra-posframe-mode)
 ;;(defvar global-toggles--title (with-faicon "toggle-on" "Toggles" 1 -0.05))
 (defvar global-toggles--title  "Toggles" )
 (pretty-hydra-define global-toggles

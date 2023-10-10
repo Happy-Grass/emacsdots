@@ -202,3 +202,7 @@
 	path = site-lisp/extensions/hydra-posframe
 	url = git@github.com:Ladicle/hydra-posframe.git
 	branch = master
+[submodule "site-lisp/extensions/auctex"]
+	path = site-lisp/extensions/auctex
+	url = git@github.com:mikesperber/auctex.git
+	branch = master
