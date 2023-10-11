@@ -3,6 +3,14 @@
 (require 'lsp-bridge-jdtls)
 
 ;;; Code:
+;; 设置环境变量，使找到指定的pylsp
+;(setenv "PATH" (concat "D:/Conda/Scripts/pylsp.exe;" (getenv "PATH")))
+;(setenv "PATH" (concat "D:/Conda/Scripts/pyright-langserver.exe;" (getenv "PATH")))
+;; 指定语言使用的服务器
+(setq lsp-bridge-python-lsp-server "pylsp")
+
+(setq lsp-bridge-user-langserver-dir "D:/Gitlocal/.emacs.d/site-lisp/lsp-config")
+(setq lsp-bridge-python-command "D:/Conda/python.exe")
 
 (setq lsp-bridge-enable-completion-in-minibuffer t)
 (setq lsp-bridge-signature-show-function 'lsp-bridge-signature-show-with-frame)
@@ -12,12 +20,9 @@
 (setq acm-enable-codeium nil)
 
 ;(global-lsp-bridge-mode)
-(add-hook 'prog-mode 'lsp-bridge-mode)
-
+(add-hook 'prog-mode-hoook 'lsp-bridge-mode)
 ;; 打开日志，开发者才需要
 ;; (setq lsp-bridge-enable-log t)
-(setq lsp-bridge-python-command "python.exe")
-
 
 (setq lsp-bridge-get-multi-lang-server-by-project
       (lambda (project-path filepath)
@@ -36,5 +41,6 @@
       (lambda (filepath)
         (when (string-prefix-p (expand-file-name "~/.emacs.d/site-lisp/extensions/emacs-application-framework/app") filepath)
           (expand-file-name "~/.emacs.d/site-lisp/extensions/emacs-application-framework/"))))
+
 
 (provide 'init-lsp-bridge)
