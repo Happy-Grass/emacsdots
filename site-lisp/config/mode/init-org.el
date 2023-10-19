@@ -39,7 +39,7 @@
       org-log-done 'time
       org-catch-invisible-edits 'smart
       org-startup-indented t
-      org-ellipsis (if (char-displayable-p ?⏷) "\t⏷" nil)
+      org-ellipsis "\t⏷"
       org-pretty-entities nil
       org-hide-emphasis-markers t)
 ;; Super agenda
@@ -146,7 +146,7 @@
       org-roam-ui-open-on-start t)
 
 ;; Org-timeline
-(add-hook 'org-agenda-finalize-hook 'org-timline-insert-timeline :append)
+(add-hook 'org-agenda-finalize-hook 'org-timeline-insert-timeline :append)
 
 ;; Org-fancy-priorities
 (setq org-fancy-priorities-list '((?A . "❗")
@@ -160,5 +160,44 @@
                                   (?I . "Important")))
 (add-hook 'org-mode 'org-fancy-priorities-mode)
 (add-hook 'org-agenda-finalize-hook 'org-fancy-priorities-mode)
+
+(major-mode-hydra-define org-mode
+ (:title (pretty-hydra-title "Org Commands" 'sucicon "nf-custom-orgmode") :color amaranth :quit-key ("q" "C-g"))
+ ("Agenda"
+  (("t" org-todo "org-todo" :exit t)
+   ("s" org-schedule "schedule" :exit t)
+   ("d" org-deadline "deadline" :exit t)
+   ("p" org-pomodoro "pomodoro" :exit t))
+  "Attachment"
+  (("a" org-attach "attach" :exit t)
+   )
+  "Outline"
+  (("o" org-cycle "cycle" :exit t)
+   ("O" org-global-cycle "cycle-global" :exit t)
+   ("w" org-show-all "show-all" :exit t)
+   )
+ ))
+
+(pretty-hydra-define org-roam-hydra
+  (:title (pretty-hydra-title "Org Roam Commands" 'mdicon "nf-md-broadcast" )
+    :color blue :quit-key ("q" "C-g"))
+   ("Node"
+    (("c" org-roam-capture "node-capture" :exit t)
+     ("f" org-roam-node-find "node-find" :exit t)
+     ("i" org-roam-node-insert "node-insert" :exit t)
+     ("u" org-roam-ui-mode "node-ui" :exit t))
+    "Edit"
+    (("m" org-roam-ref-remove "ref-remove" :exit t)
+     ("e" org-roam-ref-add "ref-add" :exit t)
+     ("t" org-roam-tag-add "tag-add" :exit t)
+     ("a" org-roam-tag-remove "tag-remove" :exit t)
+     ("s" org-roam-alias-add "alias-add" :exit t)
+     ("h" org-roam-alias-remove "alias-remove" :exit t))
+    "Bibnotes"
+    (("I" orb-insert-link "insert-article-ref" :exit t)
+     ("F" org-roam-ref-find "find-article-node" :exit t)
+     ("r" org-roam-bibtex-mode "refresh" :exit t)
+     ("p" orb-note-actions "note-action" :exit t))
+    ))
 (provide 'init-org)
 ;;; init-org.el ends here.

@@ -6,6 +6,8 @@
 
 ;; Scratch init
 (setq initial-environment nil)         ;Clear the environmental path from parent process
+(setq exec-path nil)
+(setenv "PATH" "")
 ;(setq-default mode-line-format nil)    ;Don't show the default modeline
 (defun add-subdirs-to-load-path (search-dir)
   (interactive)

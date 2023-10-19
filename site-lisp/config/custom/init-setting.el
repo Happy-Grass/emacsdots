@@ -15,7 +15,7 @@
 
 
 ;; Org-roam
-(defcustom xfw-org-roam-home "D:/Gitlocal/Notes/roam"
+(defcustom xfw-org-roam-home "F:/BaiduSyncdisk/Notes/roam"
   "Set Org-roam home"
   :group 'xfw
   :type 'string)

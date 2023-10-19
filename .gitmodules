@@ -206,3 +206,7 @@
 	path = site-lisp/extensions/auctex
 	url = git@github.com:mikesperber/auctex.git
 	branch = master
+[submodule "site-lisp/extensions/evil-leader"]
+	path = site-lisp/extensions/evil-leader
+	url = git@github.com:cofi/evil-leader.git
+	branch = master

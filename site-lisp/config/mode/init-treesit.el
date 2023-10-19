@@ -1,23 +1,5 @@
 ;;; init-treesit.el --- Config for treesit   -*- lexical-binding: t; -*-
-
-;; Filename: init-treesit.el
-;; Description: Config for treesit
-;; Author: Andy Stewart <lazycat.manatee@gmail.com>
-;; Maintainer: Andy Stewart <lazycat.manatee@gmail.com>
-;; Copyright (C) 2023, Andy Stewart, all rights reserved.
-;; Created: 2023-02-04 12:37:41
-;; Version: 0.1
-;; Last-Updated: 2023-02-04 12:37:41
-;;           By: Andy Stewart
-;; URL: https://www.github.org/manateelazycat/init-treesit
-;; Keywords:
-;; Compatibility: GNU Emacs 30.0.50
-;;
-;; Features that might be required by this library:
-
-
 ;;; Commentary:
-;;
 ;; Config for treesit
 ;;
 

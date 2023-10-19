@@ -1,1 +1,6 @@
+(require 'evil-leader)
+(evil-leader/set-leader ",")
+(global-evil-leader-mode)
+(evil-mode 1)
+(evil-leader/set-key "f" 'find-file)
 (provide 'init-evil)
