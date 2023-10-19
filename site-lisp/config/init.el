@@ -18,7 +18,6 @@
                             inhibit-message nil)
               (redisplay)))
   (require 'init-font)
-  ;(setq mode-line-format nil)
   (require 'init-generic)
   (require 'init-vertico)
   (require 'init-popper)
@@ -32,17 +31,14 @@
   (require 'init-hydra);; must load before init-lazyload
   (require 'init-lazyload)
   (require 'init-setting)
-  ;(setq evil-no-display t
   (require 'init-treesit)
   (require 'init-env)
-  ;(require 'init-pyim)
   ;(require 'init-ace)
   ;(require 'init-eaf)
   ;(require 'init-tools)
   ;(require 'init-org)
   ;(require 'init-color)
   ;(require 'init-lsp-bridge)
-  ;(require 'init-python)
   )
   (provide 'init)
 ;;; init.el ends here.

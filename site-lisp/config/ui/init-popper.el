@@ -10,6 +10,7 @@
         "\\*Apropos\\*"
         "\\*Backtrace\\*"
         "\\*Calendar\\*"
+	"\\*lsp-bridge\\*"
         "\\*Embark Actions\\*"
         "\\*Finder\\*"
         "\\*Kill Ring\\*"
