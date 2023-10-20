@@ -35,20 +35,6 @@
             " "))))
      (propertize title 'face face))))
 
-;;;###autoload
-(define-minor-mode lazyload-lsp-bridge-mode
-  "lazyload-lsp-bridge"
-  :init-value nil
-  :global nil
-  :lighter nil
-  (if lazyload-lsp-bridge-mode
-      (progn
-        (require 'init-lsp-bridge)
-	(lsp-bridge-mode))
-    (progn
-      (lsp-bridge-mode 0)
-      ))
-  )
 
 
 (pretty-hydra-define global-toggles
@@ -64,8 +50,6 @@
     ("l" global-hl-line-mode "line" :toggle t)
     ("x" highlight-sexp-mode "sexp" :toggle t)
     ("t" hl-todo-mode "todo" :toggle t))
-   "Coding"
-   (("a" lazyload-lsp-bridge-mode "lsp bridge" :toggle t))
    "UI"
    (("d" jp-themes-toggle-light-dark "dark theme" :toggle jp-current-theme-dark-p))
    "Coding"

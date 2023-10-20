@@ -27,8 +27,8 @@
 (defun change-pyright-json-with-conda ()
   (progn
     (track-python-venv-for-pyright "d:/Gitlocal/.emacs.d/site-lisp/lsp-config/pyright-background-analysis.json")
-    (lazyload-lsp-bridge-mode)
-    (lsp-bridge-restart-process)
+    (if lsp-status
+	(lsp-bridge-restart-process) (lazyload-lsp))
     )
   )
 
