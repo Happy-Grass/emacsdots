@@ -1,6 +1,5 @@
 (require 'rainbow-mode)
 (require 'rainbow-delimiters)
-(add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
 (setq rainbow-x-colors nil)
 (setq rainbow-r-colors nil)
 (setq rainbow-ansi-colors nil)

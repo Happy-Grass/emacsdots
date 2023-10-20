@@ -9,6 +9,7 @@
   (autoload funcname filename nil t))
 
 (lazy-load-evil-leader-keys "n" 'org-roam-hydra/body "init-org")
+(lazy-load-evil-leader-keys "b" 'bookmark-hydra/body "init-bookmark")
 
 ;; 输入法加载
 (lazy-load-global-keys
