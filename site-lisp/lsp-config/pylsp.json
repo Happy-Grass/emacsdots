@@ -1,0 +1,7 @@
+{
+  "name": "pylsp",
+  "languageId": "python",
+  "command": ["D:/Conda/envs/emacs/Scripts/pylsp.exe"],
+  "incomplete-fuzzy-match": true,
+  "settings": {}
+}
