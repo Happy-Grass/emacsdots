@@ -3,9 +3,9 @@
 
 (require 'lsp-bridge)
 (require 'lsp-bridge-jdtls)
-;; 指定语言使用的服务器
 
-(setq lsp-bridge-python-lsp-server "pylsp")
+;; 指定语言使用的服务器
+(setq lsp-bridge-python-lsp-server "pyright")
 (setq lsp-bridge-user-langserver-dir "D:/Gitlocal/.emacs.d/site-lisp/lsp-config")
 (setq lsp-bridge-python-command "D:/Conda/envs/emacs/python.exe")
 
