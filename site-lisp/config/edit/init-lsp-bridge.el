@@ -10,12 +10,13 @@
 (setq lsp-bridge-python-command "D:/Conda/envs/emacs/python.exe")
 
 (setq lsp-bridge-enable-completion-in-minibuffer t)
+(setq lsp-bridge-enable-hover-diagnostic t)
 (setq lsp-bridge-signature-show-function 'lsp-bridge-signature-show-with-frame)
 (setq acm-enable-quick-access t)
 (setq acm-backend-yas-match-by-trigger-keyword t)
 (setq acm-enable-tabnine nil)
 (setq acm-enable-codeium nil)
-
+(setq lsp-bridge-signature-show-function "lsp-bridge-signature-show-with-frame")
 
 (setq lsp-bridge-get-multi-lang-server-by-project
       (lambda (project-path filepath)

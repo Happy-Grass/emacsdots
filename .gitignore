@@ -10,3 +10,4 @@
 !/site-lisp/extensions
 !/site-lisp/template
 !/site-lisp/snippets
+!/site-lisp/lsp-config

@@ -5,6 +5,7 @@
 ;;(defvar global-toggles--title (with-faicon "toggle-on" "Toggles" 1 -0.05))
 
 ;; 行号
+;;;###autoload
 (define-minor-mode line-number-mode
   "Toggle line number display mode in the menu bar."
   :init-value nil
@@ -34,7 +35,7 @@
             " "))))
      (propertize title 'face face))))
 
-
+;;;###autoload
 (define-minor-mode lazyload-lsp-bridge-mode
   "lazyload-lsp-bridge"
   :init-value nil
@@ -45,7 +46,7 @@
         (require 'init-lsp-bridge)
 	(lsp-bridge-mode))
     (progn
-      (lsp-bridge-mode)
+      (lsp-bridge-mode 0)
       ))
   )
 

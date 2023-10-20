@@ -11,14 +11,35 @@
    default-tab-width 4
    python-shell-completion-native-enable nil)
 
-(conda-env-activate "base")
+
+(defun track-python-venv-for-pyright (filepath)
+  "filepath为pyright的配置文件路径,函数用于修改pyright的配置文件,实现conda切换虚拟环境的补全"
+  (let* ((json-object-type 'plist)
+	 (default-config (json-read-file filepath))
+	 (settings (plist-get default-config :settings))
+	 )
+    (plist-put settings :pythonPath (executable-find "python"))
+    (with-temp-file filepath
+      (insert (json-encode default-config)))
+    (message "Rewrite %s" filepath)
+  ))
+
+(defun change-pyright-json-with-conda ()
+  (progn
+    (track-python-venv-for-pyright "d:/Gitlocal/.emacs.d/site-lisp/lsp-config/pyright-background-analysis.json")
+    (lazyload-lsp-bridge-mode)
+    (lsp-bridge-restart-process)
+    )
+  )
+
 (defun change-python-interpreter-with-conda ()
   "根据conda环境改变python的interpreter"
   (setq python-shell-interpreter (concat conda-env-current-path "/python.exe"))
   )
 (add-hook 'conda-postactivate-hook 'change-python-interpreter-with-conda)
+(add-hook 'conda-postactivate-hook 'change-pyright-json-with-conda)
    
-
+(conda-env-activate "base")
 (major-mode-hydra-define python-mode
  (:title (pretty-hydra-title "Python Commands" 'faicon "nf-fae-python") :color amaranth :quit-key ("q" "C-g"))
  ("Run code"
