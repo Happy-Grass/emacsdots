@@ -17,15 +17,15 @@
               (setq-default inhibit-redisplay nil
                             inhibit-message nil)
               (redisplay)))
+  (setq mode-line-format nil)
   (require 'init-font)
   (require 'init-generic)
   (require 'init-vertico)
   (require 'init-popper)
   
   (require 'vs-theme)
-  (vs-theme-load-macchiato)
-  (require 'vs-modeline)
-  ;(vs-modeline-mode)
+  (vs-theme-load-dark)
+  (require 'init-modeline)
 
   (require 'init-evil)
   (require 'init-hydra);; must load before init-lazyload

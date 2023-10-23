@@ -210,3 +210,7 @@
 	path = site-lisp/extensions/evil-leader
 	url = git@github.com:cofi/evil-leader.git
 	branch = master
+[submodule "site-lisp/extensions/emacs-minibuffer-line"]
+	path = site-lisp/extensions/emacs-minibuffer-line
+	url = git@github.com:Happy-Grass/emacs-minibuffer-line.git
+	branch = master
