@@ -214,3 +214,11 @@
 	path = site-lisp/extensions/emacs-minibuffer-line
 	url = git@github.com:Happy-Grass/emacs-minibuffer-line.git
 	branch = master
+[submodule "site-lisp/extensions/with-editor"]
+	path = site-lisp/extensions/with-editor
+	url = git@github.com:magit/with-editor.git
+	branch = main
+[submodule "site-lisp/extensions/transient"]
+	path = site-lisp/extensions/transient
+	url = git@github.com:magit/transient.git
+	branch = main

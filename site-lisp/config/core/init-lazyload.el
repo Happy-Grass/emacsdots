@@ -10,6 +10,7 @@
 
 (lazy-load-evil-leader-keys "n" 'org-roam-hydra/body "init-org")
 (lazy-load-evil-leader-keys "b" 'bookmark-hydra/body "init-bookmark")
+(lazy-load-evil-leader-keys "v" 'vc-hydra/body "init-vc")
 
 ;; 输入法加载
 (lazy-load-global-keys
