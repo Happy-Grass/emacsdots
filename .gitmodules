@@ -98,10 +98,6 @@
 	path = site-lisp/extensions/ewmctrl
 	url = git@github.com:flexibeast/ewmctrl.git
 	branch = master
-[submodule "site-lisp/extensions/general"]
-	path = site-lisp/extensions/general
-	url = git@github.com:noctuid/general.el.git
-	branch = master
 [submodule "site-lisp/extensions/org-modern"]
 	path = site-lisp/extensions/org-modern
 	url = git@github.com:minad/org-modern.git
@@ -202,10 +198,6 @@
 	path = site-lisp/extensions/hydra-posframe
 	url = git@github.com:Ladicle/hydra-posframe.git
 	branch = master
-[submodule "site-lisp/extensions/auctex"]
-	path = site-lisp/extensions/auctex
-	url = git@github.com:mikesperber/auctex.git
-	branch = master
 [submodule "site-lisp/extensions/evil-leader"]
 	path = site-lisp/extensions/evil-leader
 	url = git@github.com:cofi/evil-leader.git
@@ -222,3 +214,6 @@
 	path = site-lisp/extensions/transient
 	url = git@github.com:magit/transient.git
 	branch = main
+[submodule "site-lisp/extensions/auctex"]
+	path = site-lisp/extensions/auctex
+	url = git@github.com:emacs-straight/auctex.git
