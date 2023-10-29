@@ -1,0 +1,5 @@
+(require 'ebib)
+(setq ebib-default-directory "F:/BaiduSyncdisk/Notes/ebib")
+(setq ebib-notes-directory "F:/BaiduSyncdisk/Notes/roam/article")
+(setq ebib-preload-bib-files '("F:/BaiduSyncdisk/Notes/ebib/bib/default.bib"))
+(provide 'init-ebib)

@@ -214,6 +214,10 @@
 	path = site-lisp/extensions/transient
 	url = git@github.com:magit/transient.git
 	branch = main
-[submodule "site-lisp/extensions/auctex"]
-	path = site-lisp/extensions/auctex
-	url = git@github.com:emacs-straight/auctex.git
+[submodule "site-lisp/extensions/ebib"]
+	path = site-lisp/extensions/ebib
+	url = git@github.com:joostkremers/ebib.git
+[submodule "site-lisp/extensions/parsebib"]
+	path = site-lisp/extensions/parsebib
+	url = git@github.com:joostkremers/parsebib.git
+	branch = master
