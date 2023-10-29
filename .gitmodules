@@ -221,3 +221,6 @@
 	path = site-lisp/extensions/parsebib
 	url = git@github.com:joostkremers/parsebib.git
 	branch = master
+[submodule "site-lisp/extensions/auctex"]
+	path = site-lisp/extensions/auctex
+	url = git@github.com:emacs-straight/auctex.git
