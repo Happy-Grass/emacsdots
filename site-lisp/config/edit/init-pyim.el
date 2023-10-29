@@ -1,3 +1,9 @@
+(defvar load-pyim-xr nil)
+(if (not load-pyim-xr)
+    ;;解决和auctex中而xr.el文件冲突问题
+    (progn
+      (load "~/.emacs.d/site-lisp/extensions/xr/xr.el")
+      (setq load-pyim-xr t)))
 (require 'pyim)
 (require 'pyim-basedict)
 (require 'popup nil t)

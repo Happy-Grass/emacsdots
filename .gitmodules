@@ -224,3 +224,7 @@
 [submodule "site-lisp/extensions/auctex"]
 	path = site-lisp/extensions/auctex
 	url = git@github.com:emacs-straight/auctex.git
+[submodule "site-lisp/extensions/cdlatex"]
+	path = site-lisp/extensions/cdlatex
+	url = git@github.com:cdominik/cdlatex.git
+	branch = master
