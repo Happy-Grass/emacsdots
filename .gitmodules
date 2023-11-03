@@ -232,3 +232,11 @@
 	path = site-lisp/extensions/biblio
 	url = git@github.com:cpitclaudel/biblio.el.git
 	branch = master
+[submodule "site-lisp/extensions/deadgrep"]
+	path = site-lisp/extensions/deadgrep
+	url = git@github.com:Wilfred/deadgrep.git
+	branch = master
+[submodule "site-lisp/extensions/spinner"]
+	path = site-lisp/extensions/spinner
+	url = git@github.com:Malabarba/spinner.el.git
+	branch = master

@@ -39,7 +39,7 @@
       org-log-done 'time
       org-catch-invisible-edits 'smart
       org-startup-indented t
-      org-ellipsis "\t⏷"
+      org-ellipsis "  ⏷"
       org-pretty-entities nil
       org-hide-emphasis-markers t)
 ;; Super agenda
@@ -93,6 +93,7 @@
 
 (unless (file-exists-p xfw-org-roam-home)
   (make-directory xfw-org-roam-home))
+(org-roam-db-autosync-mode)
 
 (setq org-roam-capture-templates
       '(
