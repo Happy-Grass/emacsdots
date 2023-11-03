@@ -26,6 +26,7 @@
   (require 'vs-theme)
   (vs-theme-load-dark)
   (require 'init-modeline)
+  ;(require 'init-tab)
 
   (require 'init-evil)
   (require 'init-hydra);; must load before init-lazyload
@@ -33,10 +34,9 @@
   (require 'init-setting)
   (require 'init-treesit)
   (require 'init-env)
-  ;(require 'init-ace)
+  (require 'init-ace)
   ;(require 'init-eaf)
   ;(require 'init-tools)
-  ;(require 'init-org)
   ;(require 'init-color)
   ;(require 'init-lsp-bridge)
   )

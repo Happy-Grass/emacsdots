@@ -240,3 +240,7 @@
 	path = site-lisp/extensions/spinner
 	url = git@github.com:Malabarba/spinner.el.git
 	branch = master
+[submodule "site-lisp/extensions/awesome-tab"]
+	path = site-lisp/extensions/awesome-tab
+	url = git@github.com:manateelazycat/awesome-tab.git
+	branch = master

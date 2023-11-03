@@ -12,6 +12,7 @@
 (lazy-load-evil-leader-keys "b" 'bookmark-hydra/body "init-bookmark")
 (lazy-load-evil-leader-keys "v" 'vc-hydra/body "init-vc")
 (lazy-load-evil-leader-keys "e" 'ebib "init-ebib")
+(lazy-load-evil-leader-keys "f" 'find-hydra/body "init-find")
 
 ;; 输入法加载
 (lazy-load-global-keys
