@@ -228,3 +228,7 @@
 	path = site-lisp/extensions/cdlatex
 	url = git@github.com:cdominik/cdlatex.git
 	branch = master
+[submodule "site-lisp/extensions/biblio"]
+	path = site-lisp/extensions/biblio
+	url = git@github.com:cpitclaudel/biblio.el.git
+	branch = master
