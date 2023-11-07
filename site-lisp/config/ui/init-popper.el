@@ -10,6 +10,7 @@
         "\\*Kill Ring\\*"
         help-mode
 	helpful-mode
+	tex-shell-mode
         Buffer-menu-mode
 	"magit:*" magit-mode
         "^\\*eshell.*\\*.*$"       eshell-mode
