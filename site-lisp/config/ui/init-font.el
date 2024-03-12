@@ -6,7 +6,7 @@
   "Setup fonts."
   (when (display-graphic-p)
     ;; Set default font
-    (cl-loop for font in '("Source Code Pro" "Cascadia Code" "Fira Code" "Jetbrains Mono"
+    (cl-loop for font in '("Monaspace Neon" "Source Code Pro" "Cascadia Code" "Fira Code" "Jetbrains Mono"
                            "SF Mono" "Hack"  "Menlo"
                            "Monaco" "DejaVu Sans Mono" "Consolas")
              when (font-installed-p font)
@@ -15,13 +15,13 @@
                                         :height 100))
 
     ;; Set mode-line font
-    ;; (cl-loop for font in '("Menlo" "SF Pro Display" "Helvetica")
-    ;;          when (font-installed-p font)
-    ;;          return (progn
-    ;;                   (set-face-attribute 'mode-line nil :family font :height 120)
-    ;;                   (when (facep 'mode-line-active)
-    ;;                     (set-face-attribute 'mode-line-active nil :family font :height 120))
-    ;;                   (set-face-attribute 'mode-line-inactive nil :family font :height 120)))
+     ;;(cl-loop for font in '("Menlo" "SF Pro Display" "Helvetica")
+              ;;when (font-installed-p font)
+              ;;return (progn
+                       ;;(set-face-attribute 'mode-line nil :family font :height 120)
+                       ;;(when (facep 'mode-line-active)
+                         ;;(set-face-attribute 'mode-line-active nil :family font :height 120))
+                       ;;(set-face-attribute 'mode-line-inactive nil :family font :height 120)))
 
     ;; Specify font for all unicode characters
     (cl-loop for font in '("Segoe UI Symbol" "Symbola" "Symbol")
@@ -49,5 +49,6 @@
                       (set-fontset-font t '(#x4e00 . #x9fff) (font-spec :family font))))))
 
 (xfw-setup-fonts)
+
 
 (provide 'init-font)
