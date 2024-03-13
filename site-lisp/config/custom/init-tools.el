@@ -66,6 +66,21 @@
       (proxy-socks-disable)
     (proxy-socks-enable)))
 
+(defun screen-capture ()
+  "截图工具，使用Irfanview注意安装."
+  (interactive)
+  (lower-frame) ;; 把emacs最小化
+  (setq filename
+     (concat
+       (make-temp-name
+         (concat "img"
+              "_"
+              (format-time-string "%Y%m%d_%H%M%S_")) ) ".png"))
+  (shell-command (concat " \"c:/Program Files/IrfanView/i_view64.exe\" /capture=4 /convert=" "\"c:/Users/xfwah/Documents/Orgnotes/figures/screenshots" (format "\\%s\"" filename)))  ;; IrfanView 截图
+  (insert (concat "[[file:c:/Users/xfwah/Documents/Orgnotes/figures/screenshots/" filename "]]"))
+  (org-display-inline-images)
+)
+
 (provide 'init-tools)
 ;;; init-tools.el ends here.
 

@@ -6,12 +6,54 @@
 (require 'org-roam-ui)
 (require 'org-timeline)
 (require 'org-fancy-priorities)
+(require 'org-download) ;截图
+
+(setq org-download-screenshot-method "i_view64 /capture=4 /convert=\"%s\"")
+(setq org-download-display-inline-images 'posframe)
+(setq-default org-download-heading-lvl nil)
+(setq-default org-download-image-dir (concat xfw-org-roam-home "/figures"))
+;; Drag-and-drop to `dired`
+(add-hook 'dired-mode-hook 'org-download-enable)
+;; Show images in posframe
+
+(defun org-showlink-image ()  
+  "使用posframe显示图片"  
+  (interactive)  
+  (let* ((link (org-element-context))  
+         (path (and (org-element-type link)  
+                    (org-element-property :path link)))  
+         (image-file (and path (expand-file-name path)))  
+         (image-buffer (get-buffer-create "*Image Viewer")))  
+
+    (with-current-buffer image-buffer
+      (erase-buffer)
+      (insert-image-file image-file))
+    (posframe-show image-buffer
+		   :position (point)
+		   :mim-width 40
+		   :min-height 10
+		   :internal-border-width 1
+		   :poshandler 'posframe-poshandler-window-top-right-corner
+		   :internal-border-color "red")))
+(defun delete-showed-image ()
+  "posframe不会自动删除,使用这个手动删除"
+  (interactive)
+  (posframe-delete-frame "*Image Viewer"))
+  
+(define-key org-mode-map (kbd "C-c i") 'org-showlink-image)
+(define-key org-mode-map (kbd "C-c o") 'delete-showed-image)
 
 ;;UI, org-modern
 ;; Activate org-modern-mode for per buffer
 (add-hook 'org-mode-hook #'org-modern-mode)
 (add-hook 'org-agenda-finalize-hook #'org-modern-agenda)
-
+;; auto wrap in org-mode
+(add-hook 'org-mode-hook (lambda ()
+			   (setq truncate-lines nil)))
+(add-hook 'org-mode-hook (lambda ()
+			   (progn (set-face-attribute 'org-level-1 nil :height 1.6 :bold t)
+				 (set-face-attribute 'org-level-2 nil :height 1.4 :bold t)
+				 (set-face-attribute 'org-level-3 nil :height 1.2 :bold t))))
 ;; Agenda
 (setq org-modules nil                 ; Faster loading
       org-directory xfw-org-roam-home
