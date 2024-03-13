@@ -248,3 +248,7 @@
 	path = site-lisp/extensions/emacs-purpose
 	url = git@github.com:bmag/emacs-purpose.git
 	branch = master
+[submodule "site-lisp/extensions/org-download"]
+	path = site-lisp/extensions/org-download
+	url = git@github.com:abo-abo/org-download.git
+	branch = master
