@@ -264,3 +264,7 @@
 	path = site-lisp/extensions/tablist
 	url = git@github.com:politza/tablist.git
 	branch = master
+[submodule "site-lisp/extensions/org-noter"]
+	path = site-lisp/extensions/org-noter
+	url = git@github.com:weirdNox/org-noter.git
+	branch = master
