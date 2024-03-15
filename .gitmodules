@@ -260,3 +260,7 @@
 	path = site-lisp/extensions/epdfinfo-compiled
 	url = git@github.com:Happy-Grass/epdfinfo-windows.git
 	branch = master
+[submodule "site-lisp/extensions/tablist"]
+	path = site-lisp/extensions/tablist
+	url = git@github.com:politza/tablist.git
+	branch = master
