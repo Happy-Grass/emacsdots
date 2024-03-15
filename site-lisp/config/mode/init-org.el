@@ -51,9 +51,9 @@
 (add-hook 'org-mode-hook (lambda ()
 			   (setq truncate-lines nil)))
 (add-hook 'org-mode-hook (lambda ()
-			   (progn (set-face-attribute 'org-level-1 nil :height 1.6 :bold t)
-				 (set-face-attribute 'org-level-2 nil :height 1.4 :bold t)
-				 (set-face-attribute 'org-level-3 nil :height 1.2 :bold t))))
+			   (progn (set-face-attribute 'org-level-1 nil :height 1.4 :bold t)
+				 (set-face-attribute 'org-level-2 nil :height 1.2 :bold t)
+				 (set-face-attribute 'org-level-3 nil :height 1.1 :bold t))))
 ;; Agenda
 (setq org-modules nil                 ; Faster loading
       org-directory xfw-org-roam-home
@@ -288,7 +288,7 @@ prepended to the element after the #+HEADER: tag."
     "Source"
     (("s" (hot-expand "<s") "src")
      ("m" (hot-expand "<s" "emacs-lisp") "emacs-lisp")
-     ("y" (hot-expand "<s" "python :results output") "python")
+     ("y" (hot-expand "<s" "python :results value") "python")
      ("p" (hot-expand "<s" "perl") "perl")
      ("w" (hot-expand "<s" "powershell") "powershell")
      ("r" (hot-expand "<s" "ruby") "ruby")
@@ -309,6 +309,9 @@ prepended to the element after the #+HEADER: tag."
 	      (if (or (region-active-p) (looking-back "^\s*" 1))
 		  (org-template-hydra/body)
 		(self-insert-command 1))))
-
+(org-babel-do-load-languages 'org-babel-load-languages
+			     '((python . t)))
+(setq org-babel-python-command "D:/Conda/envs/emacs/python.exe")
+(require 'init-org-export)
 (provide 'init-org)
 ;;; init-org.el ends here.

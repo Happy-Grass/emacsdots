@@ -46,8 +46,8 @@
 	(message "init-tex.el loaded"))
     (message "init-tex.el has been loaded, nothing to do！"))
   )
-(add-hook 'python-mode-hook 'lazyload-python-setup)
-(add-hook 'python-ts-mode-hook 'lazyload-python-setup)
+;;(add-hook 'python-mode-hook 'lazyload-python-setup)
+;;(add-hook 'python-ts-mode-hook 'lazyload-python-setup)
 (add-hook 'tex-mode-hook 'auctex-lazyload)
 (add-hook 'latex-mode-hook 'auctex-lazyload)
 

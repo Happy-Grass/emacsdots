@@ -252,3 +252,11 @@
 	path = site-lisp/extensions/org-download
 	url = git@github.com:abo-abo/org-download.git
 	branch = master
+[submodule "site-lisp/extensions/pdf-tools"]
+	path = site-lisp/extensions/pdf-tools
+	url = git@github.com:vedang/pdf-tools.git
+	branch = master
+[submodule "site-lisp/extensions/epdfinfo-compiled"]
+	path = site-lisp/extensions/epdfinfo-compiled
+	url = git@github.com:Happy-Grass/epdfinfo-windows.git
+	branch = master
