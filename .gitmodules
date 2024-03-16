@@ -292,3 +292,7 @@
 	path = site-lisp/extensions/citeproc
 	url = git@github.com:andras-simonyi/citeproc-el.git
 	branch = master
+[submodule "site-lisp/extensions/queue"]
+	path = site-lisp/extensions/queue
+	url = git@github.com:emacs-straight/queue.git
+	branch = master
