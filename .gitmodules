@@ -280,3 +280,11 @@
 	path = site-lisp/extensions/org-ref
 	url = git@github.com:jkitchin/org-ref.git
 	branch = master
+[submodule "site-lisp/extensions/helm-bibtex"]
+	path = site-lisp/extensions/helm-bibtex
+	url = git@github.com:tmalsburg/helm-bibtex.git
+	branch = master
+[submodule "site-lisp/extensions/ox-pandoc"]
+	path = site-lisp/extensions/ox-pandoc
+	url = git@github.com:kawabata/ox-pandoc.git
+	branch = master
