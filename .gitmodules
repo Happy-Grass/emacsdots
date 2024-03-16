@@ -276,3 +276,7 @@
 	path = site-lisp/extensions/pyim-tsinghua-dict
 	url = git@github.com:redguardtoo/pyim-tsinghua-dict.git
 	branch = master
+[submodule "site-lisp/extensions/org-ref"]
+	path = site-lisp/extensions/org-ref
+	url = git@github.com:jkitchin/org-ref.git
+	branch = master
