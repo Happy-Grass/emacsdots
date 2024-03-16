@@ -288,3 +288,7 @@
 	path = site-lisp/extensions/ox-pandoc
 	url = git@github.com:kawabata/ox-pandoc.git
 	branch = master
+[submodule "site-lisp/extensions/citeproc"]
+	path = site-lisp/extensions/citeproc
+	url = git@github.com:andras-simonyi/citeproc-el.git
+	branch = master
