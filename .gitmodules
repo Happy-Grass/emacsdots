@@ -296,3 +296,7 @@
 	path = site-lisp/extensions/queue
 	url = git@github.com:emacs-straight/queue.git
 	branch = master
+[submodule "site-lisp/extensions/request"]
+	path = site-lisp/extensions/request
+	url = git@github.com:tkf/emacs-request.git
+	branch = master
