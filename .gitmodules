@@ -268,3 +268,7 @@
 	path = site-lisp/extensions/org-noter
 	url = git@github.com:weirdNox/org-noter.git
 	branch = master
+[submodule "site-lisp/extensions/ace-window"]
+	path = site-lisp/extensions/ace-window
+	url = git@github.com:abo-abo/ace-window.git
+	branch = master
