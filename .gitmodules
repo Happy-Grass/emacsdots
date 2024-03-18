@@ -300,3 +300,7 @@
 	path = site-lisp/extensions/request
 	url = git@github.com:tkf/emacs-request.git
 	branch = master
+[submodule "site-lisp/extensions/google-translate"]
+	path = site-lisp/extensions/google-translate
+	url = git@github.com:atykhonov/google-translate.git
+	branch = master
