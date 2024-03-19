@@ -304,3 +304,7 @@
 	path = site-lisp/extensions/centaur-tabs
 	url = git@github.com:ema2159/centaur-tabs.git
 	branch = master
+[submodule "site-lisp/extensions/powerline"]
+	path = site-lisp/extensions/powerline
+	url = git@github.com:milkypostman/powerline.git
+	branch = master
