@@ -308,3 +308,7 @@
 	path = site-lisp/extensions/powerline
 	url = git@github.com:milkypostman/powerline.git
 	branch = master
+[submodule "site-lisp/extensions/doom-themes"]
+	path = site-lisp/extensions/doom-themes
+	url = git@github.com:doomemacs/themes.git
+	branch = master
