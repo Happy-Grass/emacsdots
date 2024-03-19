@@ -13,11 +13,24 @@
 (lazy-load-evil-leader-keys "v" 'vc-hydra/body "init-vc")
 (lazy-load-evil-leader-keys "e" 'ebib "init-ebib")
 (lazy-load-evil-leader-keys "f" 'find-hydra/body "init-find")
+(lazy-load-evil-leader-keys "t" 'tools-hydra/body "init-tools")
+(lazy-load-evil-leader-keys "w" 'window-hydra/body "init-window")
 
 ;; 输入法加载
 (lazy-load-global-keys
  '(("C-\\" . toggle-pyim))
  "init-pyim")
+
+(lazy-load-global-keys
+ '(("C-c e" . ebib))
+ "init-ebib")
+(lazy-load-global-keys
+ '(("C-c t" . tools-hydra/body))
+ "init-tools")
+
+(lazy-load-global-keys
+ '(("C-c w" . window-hydra/body))
+ "init-window")
 
 ;; 快捷选项,加载的文件还需要配置
 (lazy-load-global-keys
@@ -46,6 +59,15 @@
 	(message "init-tex.el loaded"))
     (message "init-tex.el has been loaded, nothing to do！"))
   )
+(defun xfw-pdf-hook ()  
+  (when (string-match "\\.pdf\\'" (buffer-file-name))  
+    (require 'init-pdf))) 
+
+(defun xfw-org-hook ()  
+  (when (string-match "\\.org\\'" (buffer-file-name))  
+    (require 'init-org))) 
+(add-hook 'find-file-hook 'xfw-pdf-hook)
+(add-hook 'find-file-hook 'xfw-org-hook)
 ;;(add-hook 'python-mode-hook 'lazyload-python-setup)
 ;;(add-hook 'python-ts-mode-hook 'lazyload-python-setup)
 (add-hook 'tex-mode-hook 'auctex-lazyload)

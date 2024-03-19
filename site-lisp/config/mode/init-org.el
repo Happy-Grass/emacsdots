@@ -6,42 +6,8 @@
 (require 'org-roam-ui)
 (require 'org-timeline)
 (require 'org-fancy-priorities)
-(require 'org-download) ;截图
-
-(setq org-download-screenshot-method "i_view64 /capture=4 /convert=\"%s\"")
-(setq org-download-display-inline-images 'posframe)
-(setq-default org-download-heading-lvl nil)
-(setq-default org-download-image-dir (concat xfw-org-roam-home "/figures"))
-;; Drag-and-drop to `dired`
-(add-hook 'dired-mode-hook 'org-download-enable)
-;; Show images in posframe
-
-(defun org-showlink-image ()  
-  "使用posframe显示图片"  
-  (interactive)  
-  (let* ((link (org-element-context))  
-         (path (and (org-element-type link)  
-                    (org-element-property :path link)))  
-         (image-file (and path (expand-file-name path)))  
-         (image-buffer (get-buffer-create "*Image Viewer")))  
-
-    (with-current-buffer image-buffer
-      (erase-buffer)
-      (insert-image-file image-file))
-    (posframe-show image-buffer
-		   :position (point)
-		   :mim-width 40
-		   :min-height 10
-		   :internal-border-width 1
-		   :poshandler 'posframe-poshandler-window-top-right-corner
-		   :internal-border-color "red")))
-(defun delete-showed-image ()
-  "posframe不会自动删除,使用这个手动删除"
-  (interactive)
-  (posframe-delete-frame "*Image Viewer"))
-  
-(define-key org-mode-map (kbd "C-c i") 'org-showlink-image)
-(define-key org-mode-map (kbd "C-c o") 'delete-showed-image)
+(require 'org-noter)
+(require 'org-ref)
 
 ;;UI, org-modern
 ;; Activate org-modern-mode for per buffer
@@ -312,6 +278,28 @@ prepended to the element after the #+HEADER: tag."
 (org-babel-do-load-languages 'org-babel-load-languages
 			     '((python . t)))
 (setq org-babel-python-command "D:/Conda/envs/emacs/python.exe")
+;; Org-noter 配置
+(setq org-noter-notes-search-path (list (concat xfw-org-roam-home "/article/")))
+(setq org-noter-default-notes-file-names '("Summary.org"))
+(setq org-noter-always-create-frame nil)
+(setq org-noter-highlight-selected-text t);noter文本高亮 
+(setq org-noter-max-short-selected-text-length 20) ;; 默认为80,修改长短文标准
+(setq org-noter-default-heading-title "第 $p$ 页的笔记") ; 修改短文默认的标题
 (require 'init-org-export)
+;; Org-ref
+(setq bibtex-completion-bibliography (list (concat xfw-notes-home "/ebib/bib/default.bib"))
+      bibtex-completion-library-path (list (concat xfw-notes-home "/ebib/pdf/"))
+      bibtex-completion-notes-path (concat xfw-org-roam-home "/article/")
+      bibtex-completion-notes-template-multiple-files "* ${author-or-editor}, ${title}, ${journal}, (${year}) :${=type=}: \n\nSee [[cite:&${=key=}]]\n"
+      bibtex-completion-additional-search-fields '(kewwords)
+      bibtex-completion-display-formats
+	'((article       . "${=has-pdf=:1}${=has-note=:1} ${year:4} ${author:36} ${title:*} ${journal:40}")
+	  (inbook        . "${=has-pdf=:1}${=has-note=:1} ${year:4} ${author:36} ${title:*} Chapter ${chapter:32}")
+	  (incollection  . "${=has-pdf=:1}${=has-note=:1} ${year:4} ${author:36} ${title:*} ${booktitle:40}")
+	  (inproceedings . "${=has-pdf=:1}${=has-note=:1} ${year:4} ${author:36} ${title:*} ${booktitle:40}")
+	  (t             . "${=has-pdf=:1}${=has-note=:1} ${year:4} ${author:36} ${title:*}"))
+      bibtex-completion-pdf-open-function
+      (lambda (fpath)
+	(call-process "open" nil 0 nil fpath)))
 (provide 'init-org)
 ;;; init-org.el ends here.

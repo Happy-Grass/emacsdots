@@ -20,4 +20,10 @@
   :group 'xfw
   :type 'string)
 
+
+(defcustom xfw-notes-home "F:/BaiduSyncdisk/Notes"
+  "Set Org-roam home"
+  :group 'xfw
+  :type 'string)
+
 (provide 'init-setting)

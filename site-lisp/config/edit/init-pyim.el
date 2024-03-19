@@ -8,6 +8,7 @@
 (require 'pyim-basedict)
 (require 'popup nil t)
 (require 'posframe nil t)
+(require 'pyim-tsinghua-dict)
 
 (setq pyim-page-tooltip '(posframe popup minibuffer))
 (setq pyim-page-style 'one-line)
@@ -27,5 +28,6 @@
     (pyim-cregexp-build result)))
 (advice-add 'orderless-regexp :around #'my-orderless-regexp)
 
+(pyim-tsinghua-dict-enable) ;; 添加清华字典
 
 (provide 'init-pyim)
