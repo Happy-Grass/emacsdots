@@ -240,10 +240,6 @@
 	path = site-lisp/extensions/spinner
 	url = git@github.com:Malabarba/spinner.el.git
 	branch = master
-[submodule "site-lisp/extensions/awesome-tab"]
-	path = site-lisp/extensions/awesome-tab
-	url = git@github.com:manateelazycat/awesome-tab.git
-	branch = master
 [submodule "site-lisp/extensions/emacs-purpose"]
 	path = site-lisp/extensions/emacs-purpose
 	url = git@github.com:bmag/emacs-purpose.git
@@ -303,4 +299,8 @@
 [submodule "site-lisp/extensions/google-translate"]
 	path = site-lisp/extensions/google-translate
 	url = git@github.com:atykhonov/google-translate.git
+	branch = master
+[submodule "site-lisp/extensions/centaur-tabs"]
+	path = site-lisp/extensions/centaur-tabs
+	url = git@github.com:ema2159/centaur-tabs.git
 	branch = master
