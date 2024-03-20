@@ -312,3 +312,7 @@
 	path = site-lisp/extensions/doom-themes
 	url = git@github.com:doomemacs/themes.git
 	branch = master
+[submodule "site-lisp/extensions/evil-find-char-pinyin"]
+	path = site-lisp/extensions/evil-find-char-pinyin
+	url = git@github.com:cute-jumper/evil-find-char-pinyin.git
+	branch = master
