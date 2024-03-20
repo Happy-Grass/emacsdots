@@ -23,10 +23,15 @@
   (require 'init-vertico)
   (require 'init-popper)
   
-  (require 'vs-theme)
-  (vs-theme-load-dark)
+
+  (require 'doom-themes)
+  (setq doom-themes-enable-bold t
+	doom-themes-enable-italic t)
+  (load-theme 'doom-tokyo-night t)
+  ;;(require 'vs-theme)
+  ;;(vs-theme-load-dark)
   (require 'init-modeline)
-  ;(require 'init-tab)
+  ;;(require 'init-tab)
 
   (require 'init-evil)
   (require 'init-hydra);; must load before init-lazyload
