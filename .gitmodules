@@ -316,3 +316,7 @@
 	path = site-lisp/extensions/evil-find-char-pinyin
 	url = git@github.com:cute-jumper/evil-find-char-pinyin.git
 	branch = master
+[submodule "site-lisp/extensions/org-appear"]
+	path = site-lisp/extensions/org-appear
+	url = git@github.com:awth13/org-appear.git
+	branch = master
