@@ -17,7 +17,8 @@
               (setq-default inhibit-redisplay nil
                             inhibit-message nil)
               (redisplay)))
-  (setq mode-line-format nil)
+
+
   (require 'init-font)
   (require 'init-generic)
   (require 'init-vertico)
@@ -31,6 +32,8 @@
   ;;(require 'vs-theme)
   ;;(vs-theme-load-dark)
   (require 'init-modeline)
+  (setq custom-file "~/.emacs.d/.emacs-custom.el")
+  (load custom-file)
   ;;(require 'init-tab)
 
   (require 'init-evil)

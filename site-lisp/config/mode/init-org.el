@@ -9,6 +9,16 @@
 (require 'org-noter)
 (require 'org-ref)
 
+
+;; 让中文也可以不加空格就使用行内格式
+(setcar (nthcdr 0 org-emphasis-regexp-components) " \t('\"{[:nonascii:]")
+(setcar (nthcdr 1 org-emphasis-regexp-components) "- \t.,:!?;'\")}\\[[:nonascii:]")
+(org-set-emph-re 'org-emphasis-regexp-components org-emphasis-regexp-components)
+(org-element-update-syntax)
+;; 规定上下标必须加 {}，否则中文使用下划线时它会以为是两个连着的下标
+(setq org-use-sub-superscripts "{}")
+;;自定义强调格式
+
 ;;UI, org-modern
 ;; Activate org-modern-mode for per buffer
 (add-hook 'org-mode-hook #'org-modern-mode)

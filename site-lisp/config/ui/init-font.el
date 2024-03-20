@@ -6,7 +6,7 @@
   "Setup fonts."
   (when (display-graphic-p)
     ;; Set default font
-    (cl-loop for font in '("Monaspace Neon" "Source Code Pro" "Cascadia Code" "Fira Code" "Jetbrains Mono"
+    (cl-loop for font in '("Monaspace Neon" "Victor mono"  "Source Code Pro" "Cascadia Code" "Fira Code" "Jetbrains Mono"
                            "SF Mono" "Hack"  "Menlo"
                            "Monaco" "DejaVu Sans Mono" "Consolas")
              when (font-installed-p font)

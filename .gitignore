@@ -4,6 +4,7 @@
 !.emacs
 !.README.md
 !site-start.el
+!.emacs-custom.el
 !/site-lisp
 /site-lisp/*
 !/site-lisp/config
