@@ -6,4 +6,5 @@
 (awesome-tray-mode 1)
 (setq awesome-tray-mode-line-active-color "SkyBule3")
 ;(setq awesome-tray-position "right")
+(setq mode-line-format nil)
 (provide 'init-modeline)
