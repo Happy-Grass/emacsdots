@@ -324,3 +324,7 @@
 	path = site-lisp/extensions/corfu
 	url = git@github.com:minad/corfu.git
 	branch = main
+[submodule "site-lisp/extensions/nerd-icons-corfu"]
+	path = site-lisp/extensions/nerd-icons-corfu
+	url = git@github.com:LuigiPiucco/nerd-icons-corfu.git
+	branch = master
