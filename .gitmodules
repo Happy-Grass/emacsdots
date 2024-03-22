@@ -320,3 +320,7 @@
 	path = site-lisp/extensions/org-appear
 	url = git@github.com:awth13/org-appear.git
 	branch = master
+[submodule "site-lisp/extensions/corfu"]
+	path = site-lisp/extensions/corfu
+	url = git@github.com:minad/corfu.git
+	branch = main
