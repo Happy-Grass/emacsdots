@@ -8,28 +8,41 @@
 (require 'org-fancy-priorities)
 (require 'org-noter)
 (require 'org-ref)
-
+(require 'org-appear)
 
 ;; 让中文也可以不加空格就使用行内格式
 (setcar (nthcdr 0 org-emphasis-regexp-components) " \t('\"{[:nonascii:]")
 (setcar (nthcdr 1 org-emphasis-regexp-components) "- \t.,:!?;'\")}\\[[:nonascii:]")
 (org-set-emph-re 'org-emphasis-regexp-components org-emphasis-regexp-components)
 (org-element-update-syntax)
-;; 规定上下标必须加 {}，否则中文使用下划线时它会以为是两个连着的下标
-(setq org-use-sub-superscripts "{}")
 ;;自定义强调格式
+
+;; 自动展开缩写连接
+(setq org-appear-autoemphasis t)
+(setq org-appear-autolinks t)
+(setq org-appear-autosubmarkers t)
+(setq org-appear-autoentities t)
+(setq org-appear-autokeywords t)
+
+(add-hook 'org-mode-hook 'org-appear-mode)
+(setq org-appear-trigger 'always)
 
 ;;UI, org-modern
 ;; Activate org-modern-mode for per buffer
+
+(setq org-modern-table nil)
 (add-hook 'org-mode-hook #'org-modern-mode)
 (add-hook 'org-agenda-finalize-hook #'org-modern-agenda)
 ;; auto wrap in org-mode
 (add-hook 'org-mode-hook (lambda ()
 			   (setq truncate-lines nil)))
 (add-hook 'org-mode-hook (lambda ()
-			   (progn (set-face-attribute 'org-level-1 nil :height 1.4 :bold t)
-				 (set-face-attribute 'org-level-2 nil :height 1.2 :bold t)
-				 (set-face-attribute 'org-level-3 nil :height 1.1 :bold t))))
+			   (progn (set-face-attribute 'org-level-1 nil :height 1.6 :bold t)
+				 (set-face-attribute 'org-level-2 nil :height 1.4 :bold t)
+				 (set-face-attribute 'org-level-3 nil :height 1.2 :bold t)
+				 )))
+(set-face-attribute 'org-table nil :family "Sarasa Term SC Nerd":fontset "fontset-variable pitch orgtable");;表格单独使用字符集
+(advice-add #'org-string-width :override #'org--string-width-1);;单独设置表格字体必须配置,要不然对不齐
 ;; Agenda
 (setq org-modules nil                 ; Faster loading
       org-directory xfw-org-roam-home
@@ -190,6 +203,10 @@
   "Attachment"
   (("a" org-attach "attach" :exit t)
    )
+  "Ref"
+  (("r" org-ref-insert-link-hydra/body "insert link" :exit t)
+   ("c" org-ref-citation-hydra/body "citation link" :exit t)
+   )
   "Outline"
   (("o" org-cycle "cycle" :exit t)
    ("O" org-global-cycle "cycle-global" :exit t)
@@ -311,5 +328,23 @@ prepended to the element after the #+HEADER: tag."
       bibtex-completion-pdf-open-function
       (lambda (fpath)
 	(call-process "open" nil 0 nil fpath)))
+
+
+;; 渲染上下标使用字符
+(setq org-pretty-entities t)
+(setq org-pretty-entities-include-sub-superscripts t)
+;; 规定上下标必须加 {}，否则中文使用下划线时它会以为是两个连着的下标
+(setq org-use-sub-superscripts '{})
+;; 配置打开文件的应用,也可以是一个函数,现在懒得配
+(setq org-file-apps '(
+                      
+                      ;; file:xxxx.html#here
+                      ("\\.htm\\'" . w3m-browse-url)
+                      ("\\.html\\'" . w3m-browse-url)
+		    (directory . emacs)
+                      (auto-mode . emacs)
+                      ("\\.mm\\'" . default)
+                      ("\\.x?html?\\'" . default)
+                      ("\\.pdf\\'" . emacs)))
 (provide 'init-org)
 ;;; init-org.el ends here.

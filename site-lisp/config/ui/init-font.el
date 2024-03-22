@@ -2,6 +2,23 @@
   "Check if font with FONT-NAME is available."
   (find-font (font-spec :name font-name)))
 
+(defun create-variable-pitch-fontset (name ascii-font han-font)
+  "Create fontset named NAME with given ASCII-FONT and HAN-FONT."
+  (let ((registry (concat "fontset-variable pitch " name)))
+    (create-fontset-from-fontset-spec
+     (font-xlfd-name
+      (font-spec :family ascii-font
+                 :registry registry)))
+    (set-fontset-font registry 'han
+                      (font-spec :family han-font))
+    (set-fontset-font registry '(#x4e00 . #x9fff)
+		    (font-spec :family han-font))
+    (set-fontset-font registry 'cjk-misc
+                      (font-spec :family han-font))))
+;; 创建字符集
+(create-variable-pitch-fontset "orgtable"
+                               "Monaco"
+                               "Sarasa Term SC Nerd")
 (defun xfw-setup-fonts ()
   "Setup fonts."
   (when (display-graphic-p)
@@ -45,7 +62,7 @@
     (cl-loop for font in '("KaiTi" "WenQuanYi Micro Hei" "PingFang SC" "Microsoft Yahei" "STFangsong")
              when (font-installed-p font)
              return (progn
-                      (setq face-font-rescale-alist `((,font . 1.3)))
+                      (setq face-font-rescale-alist `((,font . 1.2)))
                       (set-fontset-font t '(#x4e00 . #x9fff) (font-spec :family font))))))
 
 (xfw-setup-fonts)

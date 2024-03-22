@@ -12,5 +12,4 @@
  ;; If there is more than one, they won't work right.
  '(font-lock-comment-face ((t (:slant italic :family "Victor Mono"))))
  '(help-key-binding ((t (:inherit fixed-pitch :background "grey19" :foreground "honeydew" :box (:line-width (-1 . -1) :color "grey35")))))
-
  )
