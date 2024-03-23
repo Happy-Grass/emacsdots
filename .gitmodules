@@ -340,3 +340,7 @@
 	path = site-lisp/extensions/all-the-icons
 	url = git@github.com:domtronn/all-the-icons.el.git
 	branch = master
+[submodule "site-lisp/extensions/olivetti"]
+	path = site-lisp/extensions/olivetti
+	url = git@github.com:rnkn/olivetti.git
+	branch = master
