@@ -56,7 +56,7 @@
 
 (global-hl-line-mode)  ;高亮当前行
 ;(menu-bar-bottom-window-divider) ;分离线，下面的
-(fringe-mode 0)
+(fringe-mode '(5 . 0))
 (show-paren-mode 0)
 (global-eldoc-mode -1)
 (provide 'init-generic)

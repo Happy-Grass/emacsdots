@@ -1,4 +1,5 @@
 (require 'corfu)
+(require 'nerd-icons-corfu)
 (corfu-mode)
 (setq completion-cycle-threshold 3)
 
@@ -33,3 +34,4 @@
         ;; Remember to add an entry for `t', the library uses that as default.
 
 ;; The Custom interface is also supported for tuning the variable above.
+(provide 'init-completion)
