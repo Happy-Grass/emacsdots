@@ -332,3 +332,7 @@
 	path = site-lisp/extensions/dirvish
 	url = git@github.com:alexluigit/dirvish.git
 	branch = main
+[submodule "site-lisp/extensions/diff-hl"]
+	path = site-lisp/extensions/diff-hl
+	url = git@github.com:dgutov/diff-hl.git
+	branch = master
