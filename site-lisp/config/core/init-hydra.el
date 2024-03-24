@@ -2,6 +2,7 @@
 (require 'hydra-posframe)
 (require 'cl-lib)
 (require 'nerd-icons)
+(require 'all-the-icons)
 (add-hook 'after-init-hook 'hydra-posframe-mode)
 ;;(defvar global-toggles--title (with-faicon "toggle-on" "Toggles" 1 -0.05))
 
