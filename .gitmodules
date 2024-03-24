@@ -344,7 +344,7 @@
 	path = site-lisp/extensions/olivetti
 	url = git@github.com:rnkn/olivetti.git
 	branch = master
-[submodule "site-lisp/extensions/org-ai"]
-	path = site-lisp/extensions/org-ai
-	url = git@github.com:rksm/org-ai.git
-	branch = master
+[submodule "site-lisp/extensions/chatgpt-shell"]
+	path = site-lisp/extensions/chatgpt-shell
+	url = git@github.com:xenodium/chatgpt-shell.git
+	branch = main
