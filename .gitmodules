@@ -348,3 +348,7 @@
 	path = site-lisp/extensions/chatgpt-shell
 	url = git@github.com:xenodium/chatgpt-shell.git
 	branch = main
+[submodule "site-lisp/extensions/emacs-ipython-notebook"]
+	path = site-lisp/extensions/emacs-ipython-notebook
+	url = git@github.com:millejoh/emacs-ipython-notebook.git
+	branch = master
