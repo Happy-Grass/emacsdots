@@ -352,3 +352,15 @@
 	path = site-lisp/extensions/emacs-ipython-notebook
 	url = git@github.com:millejoh/emacs-ipython-notebook.git
 	branch = master
+[submodule "site-lisp/extensions/emacs-deferred"]
+	path = site-lisp/extensions/emacs-deferred
+	url = git@github.com:kiwanami/emacs-deferred.git
+	branch = master
+[submodule "site-lisp/extensions/anaphora"]
+	path = site-lisp/extensions/anaphora
+	url = git@github.com:rolandwalker/anaphora.git
+	branch = master
+[submodule "site-lisp/extensions/polymode"]
+	path = site-lisp/extensions/polymode
+	url = git@github.com:polymode/polymode.git
+	branch = master
