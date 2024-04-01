@@ -28,4 +28,39 @@
     (pdf-view-deactivate-region)
 	(kill-new txt)))
 (pdf-view-set-selection-style "glyph")
+
+(defun noter-open ()
+  (interactive)
+  (progn
+    (require 'init-org)
+    (org-noter))
+  )
+
+(major-mode-hydra-define pdf-view-mode
+ (:title (pretty-hydra-title "Pdf Commands" 'faicon "nf-fa-file_pdf_o") :color amaranth :quit-key ("q" "C-g"))
+ ("Mark"
+  (("a" pdf-annot-add-markup-annotation "annotation" :exit t)
+   ("t" pdf-annot-add-text-annotation "text" :exit t)
+   ("d" pdf-annot-delete "delete" :exit t)
+   ("l" pdf-annot-list-annotations "list" :exit t))
+  "View"
+  (("G" pdf-view-goto-page "go to page" :exit t)
+   ("g" pdf-view-goto-label "go to label" :exit t)
+   ("s" pdf-view-set-selection-style "set selection style" :exit t)
+   ("y" pdf-view-kill-rmn-ring-save "copy text" :exit t)
+   )
+  "Notes"
+  (("N" noter-open "noter" :exit t)
+   ("i" org-noter-insert-note "insert note" :exit t)
+   ("I" org-noter-insert-precise-note "insert precise note" :exit t)
+   ("c" org-noter-sync-current-note "sync current" :exit t)
+   ("p" org-noter-sync-prev-note "sync pre" :exit t)
+   ("n" org-noter-sync-next-note "sync next" :exit t)
+   )
+  "Occur"
+  (("o" pdf-occur "occur" :exit t)
+   ("O" pdf-occur-next-error "next occur")
+   )
+ ))
+
 (provide 'init-pdf)
