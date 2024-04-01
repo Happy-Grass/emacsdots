@@ -1,0 +1,7 @@
+(require 'nerd-icons)
+(require 'nerd-icons-dired)
+(add-hook 'dired-mode-hook #'nerd-icons-dired-mode)
+(put 'dired-find-alternate-file 'disable nil)
+(define-key dired-mode-map (kbd "RET") 'find-alternate-file)
+(define-key dired-mode-map (kbd "<return>") 'find-alternate-file)
+(provide 'init-dired)

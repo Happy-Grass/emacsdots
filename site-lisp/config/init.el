@@ -34,6 +34,7 @@
   ;;(vs-theme-load-dark)
   (require 'init-modeline)
   (require 'init-diff-hl)
+  (require 'init-dired)
   (setq custom-file "~/.emacs.d/.emacs-custom.el")
   (load custom-file)
   ;;(require 'init-tab)
