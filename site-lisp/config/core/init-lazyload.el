@@ -15,15 +15,26 @@
 (lazy-load-evil-leader-keys "f" 'find-hydra/body "init-find")
 (lazy-load-evil-leader-keys "t" 'tools-hydra/body "init-tools")
 (lazy-load-evil-leader-keys "w" 'window-hydra/body "init-window")
+(lazy-load-evil-leader-keys "a" 'chatgpt-hydra/body "init-chatgpt")
 
 ;; 输入法加载
 (lazy-load-global-keys
  '(("C-\\" . toggle-pyim))
  "init-pyim")
 
+
+(lazy-load-global-keys
+ '(("C-c a" . chatgpt-hydra/body))
+ "init-chatgpt")
+
 (lazy-load-global-keys
  '(("C-c e" . ebib))
  "init-ebib")
+
+(lazy-load-global-keys
+ '(("C-c n" . org-roam-hydra/body))
+ "init-org")
+
 (lazy-load-global-keys
  '(("C-c t" . tools-hydra/body))
  "init-tools")
