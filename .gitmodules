@@ -364,3 +364,7 @@
 	path = site-lisp/extensions/polymode
 	url = git@github.com:polymode/polymode.git
 	branch = master
+[submodule "site-lisp/extensions/nerd-icons-dired"]
+	path = site-lisp/extensions/nerd-icons-dired
+	url = git@github.com:rainstormstudio/nerd-icons-dired.git
+	branch = main
