@@ -5,6 +5,7 @@
                               "xelatex -file-line-error -interaction nonstopmode -output-directory %o %f"
                               "xelatex -file-line-error -interaction nonstopmode -output-directory %o %f"))
 
+(setq org-latex-inputenc-alist '(("utf8" . "utf8x")));;导出tex使用utf-8编码
 ;; 生成PDF后清理辅助文件
 ;; https://answer-id.com/53623039
 (setq org-latex-logfiles-extensions 

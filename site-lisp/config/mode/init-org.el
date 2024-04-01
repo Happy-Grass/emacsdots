@@ -307,8 +307,8 @@ prepended to the element after the #+HEADER: tag."
 	      (if (or (region-active-p) (looking-back "^\s*" 1))
 		  (org-template-hydra/body)
 		(self-insert-command 1))))
-(org-babel-do-load-languages 'org-babel-load-languages
-			     '((python . t)))
+(org-babel-do-load-languages 'org-babel-load-language
+			     '((python . t) (ein . t)))
 (setq org-babel-python-command "D:/Conda/envs/emacs/python.exe")
 ;; Org-noter 配置
 (setq org-noter-notes-search-path (list (concat xfw-org-roam-home "/article/")))
@@ -330,9 +330,7 @@ prepended to the element after the #+HEADER: tag."
 	  (incollection  . "${=has-pdf=:1}${=has-note=:1} ${year:4} ${author:36} ${title:*} ${booktitle:40}")
 	  (inproceedings . "${=has-pdf=:1}${=has-note=:1} ${year:4} ${author:36} ${title:*} ${booktitle:40}")
 	  (t             . "${=has-pdf=:1}${=has-note=:1} ${year:4} ${author:36} ${title:*}"))
-      bibtex-completion-pdf-open-function
-      (lambda (fpath)
-	(call-process "open" nil 0 nil fpath)))
+      )
 
 
 ;; 渲染上下标使用字符
