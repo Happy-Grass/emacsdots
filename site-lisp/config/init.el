@@ -21,6 +21,7 @@
 
   (require 'init-font)
   (require 'init-generic)
+  (require 'init-remote)
   (require 'init-vertico)
   (require 'init-popper)
   
