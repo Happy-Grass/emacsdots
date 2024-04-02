@@ -1,4 +1,4 @@
-(setq eaf-python-command "D:/Conda/envs/emacs/python.exe")
+(setq eaf-python-command "~/.emacs.d/site-lisp/extensions/emacs-python/python.exe")
 (require 'eaf);; Need wmctrl
 (require 'eaf-browser)
 (provide 'init-eaf)
