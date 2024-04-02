@@ -70,9 +70,12 @@
 	(message "init-tex.el loaded"))
     (message "init-tex.el has been loaded, nothing to do！"))
   )
+
+;; 将 pdf-view-mode 设置为默认的 PDF 查看模式
 (defun xfw-pdf-hook ()  
   (when (string-match "\\.pdf\\'" (buffer-file-name))  
-    (require 'init-pdf))) 
+    (require 'init-pdf)
+    )) 
 
 (defun xfw-org-hook ()  
   (when (string-match "\\.org\\'" (buffer-file-name))  
