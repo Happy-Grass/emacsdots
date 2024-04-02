@@ -368,3 +368,7 @@
 	path = site-lisp/extensions/nerd-icons-dired
 	url = git@github.com:rainstormstudio/nerd-icons-dired.git
 	branch = main
+[submodule "site-lisp/extensions/emacs-python"]
+	path = site-lisp/extensions/emacs-python
+	url = git@github.com:Happy-Grass/emacs-python-3.11.8.git
+	branch = master
