@@ -34,16 +34,12 @@
         (when (string-prefix-p (expand-file-name "~/.emacs.d/site-lisp/extensions/emacs-application-framework/app") filepath)
           (expand-file-name "~/.emacs.d/site-lisp/extensions/emacs-application-framework/"))))
 
-(defun lazyload-lsp ()
+(defun xfw-lsp-mode()
   (interactive)
-  (if lsp-status
-      (progn
-	(setq lsp-status nil)
-	(lsp-bridge-mode 0))
-    (progn
-      (setq lsp-status t)
-      (lsp-bridge-mode 1)
-      )
-  ))
+  (require 'init-python-path)
+  (xfw-load-lsp)
+  (lsp-bridge-mode))
+
+
 
 (provide 'init-lsp-bridge)

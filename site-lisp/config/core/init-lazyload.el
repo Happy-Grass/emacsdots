@@ -48,9 +48,8 @@
  '(("<f1>" . global-toggles/body))
  "init-hydra")
 
-(setq lsp-status nil)
 (lazy-load-global-keys
- '(("<f2>" . lazyload-lsp))
+ '(("<f2>" . xfw-lsp-mode))
  "init-lsp-bridge")
 
 (defun lazyload-eshell-setup()
