@@ -368,7 +368,3 @@
 	path = site-lisp/extensions/emacs-python
 	url = git@github.com:Happy-Grass/emacs-python-3.11.8.git
 	branch = master
-[submodule "site-lisp/extensions/holo-layer"]
-	path = site-lisp/extensions/holo-layer
-	url = git@github.com:manateelazycat/holo-layer.git
-	branch = master
