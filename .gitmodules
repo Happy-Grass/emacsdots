@@ -10,10 +10,6 @@
 	path = site-lisp/extensions/evil
 	url = git@github.com:emacs-evil/evil.git
 	branch = master
-[submodule "site-lisp/extensions/emacs-application-framework"]
-	path = site-lisp/extensions/emacs-application-framework
-	url = git@github.com:emacs-eaf/emacs-application-framework.git
-	branch = master
 [submodule "site-lisp/extensions/vs-modeline"]
 	path = site-lisp/extensions/vs-modeline
 	url = git@github.com:Happy-Grass/vs-modeline.git
@@ -375,8 +371,4 @@
 [submodule "site-lisp/extensions/holo-layer"]
 	path = site-lisp/extensions/holo-layer
 	url = git@github.com:manateelazycat/holo-layer.git
-	branch = master
-[submodule "site-lisp/extensions/eaf-browser"]
-	path = site-lisp/extensions/eaf-browser
-	url = git@github.com:emacs-eaf/eaf-browser.git
 	branch = master
