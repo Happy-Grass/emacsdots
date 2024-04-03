@@ -376,3 +376,7 @@
 	path = site-lisp/extensions/holo-layer
 	url = git@github.com:manateelazycat/holo-layer.git
 	branch = master
+[submodule "site-lisp/extensions/eaf-browser"]
+	path = site-lisp/extensions/eaf-browser
+	url = git@github.com:emacs-eaf/eaf-browser.git
+	branch = master
