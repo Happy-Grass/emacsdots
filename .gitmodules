@@ -368,3 +368,7 @@
 	path = site-lisp/extensions/emacs-python
 	url = git@github.com:Happy-Grass/emacs-python-3.11.8.git
 	branch = master
+[submodule "site-lisp/extensions/benchmark-init"]
+	path = site-lisp/extensions/benchmark-init
+	url = git@github.com:dholm/benchmark-init-el.git
+	branch = master
