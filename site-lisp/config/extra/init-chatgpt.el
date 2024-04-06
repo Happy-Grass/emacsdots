@@ -14,7 +14,7 @@
     (re-search-forward "api-key:\\(.*\\)$" nil t)
     (match-string 1)))
 
-(setq chatgpt-shell-api-url-base "https://kapkey.chatgptapi.org.cn")
+;;(setq chatgpt-shell-api-url-base "https://kapkey.chatgptapi.org.cn")
 (setq chatgpt-shell-openai-key (read-api-key-from-file "~/.emacs.d/chatgpt-apikey.txt"))
 
 
