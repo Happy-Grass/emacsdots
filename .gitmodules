@@ -380,3 +380,7 @@
 	path = site-lisp/extensions/elfeed
 	url = git@github.com:skeeto/elfeed.git
 	branch = master
+[submodule "site-lisp/extensions/elfeed-org"]
+	path = site-lisp/extensions/elfeed-org
+	url = git@github.com:remyhonig/elfeed-org.git
+	branch = master
