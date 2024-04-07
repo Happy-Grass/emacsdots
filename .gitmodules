@@ -372,15 +372,7 @@
 	path = site-lisp/extensions/benchmark-init
 	url = git@github.com:dholm/benchmark-init-el.git
 	branch = master
-[submodule "site-lisp/extensions/elfeed-score"]
-	path = site-lisp/extensions/elfeed-score
-	url = git@github.com:sp1ff/elfeed-score.git
-	branch = master
 [submodule "site-lisp/extensions/elfeed"]
 	path = site-lisp/extensions/elfeed
 	url = git@github.com:skeeto/elfeed.git
-	branch = master
-[submodule "site-lisp/extensions/elfeed-org"]
-	path = site-lisp/extensions/elfeed-org
-	url = git@github.com:remyhonig/elfeed-org.git
 	branch = master
