@@ -376,3 +376,7 @@
 	path = site-lisp/extensions/elfeed-score
 	url = git@github.com:sp1ff/elfeed-score.git
 	branch = master
+[submodule "site-lisp/extensions/elfeed"]
+	path = site-lisp/extensions/elfeed
+	url = git@github.com:skeeto/elfeed.git
+	branch = master
