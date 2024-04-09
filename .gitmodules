@@ -376,3 +376,7 @@
 	path = site-lisp/extensions/elfeed
 	url = git@github.com:skeeto/elfeed.git
 	branch = master
+[submodule "site-lisp/extensions/emacs-modern-fringes"]
+	path = site-lisp/extensions/emacs-modern-fringes
+	url = git@github.com:SpecialBomb/emacs-modern-fringes.git
+	branch = master
