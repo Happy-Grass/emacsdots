@@ -384,3 +384,7 @@
 	path = site-lisp/extensions/vundo
 	url = git@github.com:casouri/vundo.git
 	branch = master
+[submodule "site-lisp/config/perspective-el"]
+	path = site-lisp/config/perspective-el
+	url = git@github.com:nex3/perspective-el.git
+	branch = master
