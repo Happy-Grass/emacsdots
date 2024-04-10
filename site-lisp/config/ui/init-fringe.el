@@ -1,3 +1,8 @@
+(require 'fringe-scale)
+
+(setq fringe-scale-width 12)
+(fringe-mode '(12 . 12))
+(fringe-scale-setup)
 (setq builtin-bitmaps
       ' ((question-mark [#x3c #x7e #xc3 #xc3 #x0c #x18 #x18 #x00 #x18 #x18])
 	 (exclamation-mark [#x18 #x18 #x18 #x18 #x18 #x18 #x18 #x00 #x18 #x18])
@@ -21,14 +26,6 @@
 	 (filled-square [#x7e #x7e #x7e #x7e #x7e #x7e])
 	 (vertical-bar [#xc0 #xc0 #xc0 #xc0 #xc0 #xc0 #xc0 #xc0 #xc0 #xc0 #xc0 #xc0 #xc0])
 	 (horizontal-bar [#xfe #xfe])))
-
 (dolist (bitmap builtin-bitmaps)
   (define-fringe-bitmap (car bitmap) (cadr bitmap)))
-
-
-(fringe-mode '(5 . 5))
-(set-fringe-mode 10)
-(require 'fringe-scale)
-(fringe-scale-setup)
-
 (provide 'init-fringe)

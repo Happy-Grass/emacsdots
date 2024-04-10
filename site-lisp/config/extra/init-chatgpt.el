@@ -16,6 +16,7 @@
 
 ;;(setq chatgpt-shell-api-url-base "https://kapkey.chatgptapi.org.cn")
 (setq chatgpt-shell-openai-key (read-api-key-from-file "~/.emacs.d/chatgpt-apikey.txt"))
+(setq chatgpt-shell-model-version 8);; use chatgpt 3.5 as default 
 
 
 (pretty-hydra-define chatgpt-hydra

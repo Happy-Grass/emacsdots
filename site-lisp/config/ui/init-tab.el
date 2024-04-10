@@ -1,14 +1,25 @@
 (require 'centaur-tabs)
-(centaur-tabs-mode t)
-(global-set-key (kbd "C-<prior>")  'centaur-tabs-backward)
-(global-set-key (kbd "C-<next>") 'centaur-tabs-forward)
+(global-set-key (kbd "C-;")  'centaur-tabs-backward)
+(global-set-key (kbd "C-'") 'centaur-tabs-forward)
+;; 展开关闭分组
+(global-set-key (kbd "C-:") 'centaur-tabs-toggle-groups)
+(global-set-key (kbd "C-\"") 'centaur-tabs-toggle-groups)
+
+(setq centaur-tabs-style "bar"
+        centaur-tabs-height 32
+        centaur-tabs-set-icons t
+        centaur-tabs-show-new-tab-button t
+        centaur-tabs-set-modified-marker t
+        centaur-tabs-show-navigation-buttons t
+        centaur-tabs-set-bar 'under
+        centaur-tabs-show-count nil
+        centaur-tabs-modified-marker "*"
+        ;;centaur-tabs-label-fixed-length 5
+        ;; centaur-tabs-gray-out-icons 'buffer
+        ;; centaur-tabs-plain-icons t
+        x-underline-at-descent-line t
+        centaur-tabs-left-edge-margin nil)
 (centaur-tabs-headline-match)
-(setq centaur-tabs-style "bar")
-(setq centaur-tabs-height 32)
-(setq centaur-tabs-set-icons t)
-(setq centaur-tabs-set-bar 'left)
-(setq centaur-tabs-set-bar 'under)
-(setq centaur-tabs-modified-marker "*")
 (defun centaur-tabs-buffer-groups ()
   "`centaur-tabs-buffer-groups' control buffers' group rules.
 
@@ -27,8 +38,16 @@ Other buffer group by `centaur-tabs-get-group-name' with project name."
                             magit-blame-mode
                             )))
      "Emacs")
+    ((derived-mode-p 'emacs-lisp-mode)
+     "Config")
     ((derived-mode-p 'prog-mode)
      "Editing")
+
+    ((or (string-equal "Notes" (substring (buffer-name) 0 5))
+	 (string-equal "*Edit" (substring (buffer-name) 0 5))
+	 (derived-mode-p 'pdf-view-mode))
+     "Reading")
+
     ((derived-mode-p 'dired-mode)
      "Dired")
     ((memq major-mode '(helpful-mode
@@ -44,7 +63,7 @@ Other buffer group by `centaur-tabs-get-group-name' with project name."
                         org-cdlatex-mode
                         org-agenda-log-mode
                         diary-mode))
-     "OrgMode")
+     "Orgmode")
     (t
      (centaur-tabs-get-group-name (current-buffer))))))
 (setq centaur-tabs--buffer-show-groups t)
@@ -58,8 +77,6 @@ Other buffer group by `centaur-tabs-get-group-name' with project name."
 
      ;; Buffer name not match below blacklist.
      (string-prefix-p "*epc" name)
-     (string-prefix-p "*helm" name)
-     (string-prefix-p "*Helm" name)
      (string-prefix-p "*Compile-Log*" name)
      (string-prefix-p "*lsp" name)
      (string-prefix-p "*company" name)
@@ -76,4 +93,5 @@ Other buffer group by `centaur-tabs-get-group-name' with project name."
      (and (string-prefix-p "magit" name)
           (not (file-name-extension name)))
      )))
+(centaur-tabs-mode t)
 (provide 'init-tab)

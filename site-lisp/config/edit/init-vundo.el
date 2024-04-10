@@ -12,12 +12,10 @@
    "Saved"
     (("l" vundo-goto-last-saved "last saved")
      ("r" vundo-goto-next-saved "next saved"))
-   "Mark"
-    (("m" vundo-diff-mark "diff mark")
-     ("u" vundo-diff-unmark "diff unmark")
-     ("d" vundo-diff "diff show"))
     "Quit"
-    (("q" vundo-quit "close vundo and quit" :exit t))
+    (("q" vundo-quit "close vundo" :exit t)
+     ("C-g" vundo-quit "close vundo" :exit t)
+     )
    ))
 (defun hydra-undo ()
   (interactive)

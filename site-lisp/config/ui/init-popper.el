@@ -8,6 +8,7 @@
         "\\*Async Shell Command\\*"
 	"\\*lsp-bridge\\*"
         "\\*Kill Ring\\*"
+	"\\*Backtrace\\*"
         help-mode
 	helpful-mode
 	tex-shell-mode
@@ -17,6 +18,8 @@
         "^\\*shell.*\\*.*$"        shell-mode
         "^\\*terminal.*\\*.*$"     term-mode
         "^\\*vterm[inal]*.*\\*.*$" vterm-mode
+
+        "^\\*Edit*"      
         ))
 
 (popper-mode +1)

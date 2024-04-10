@@ -10,12 +10,14 @@
 (setq ebib-extra-fields
       '((biblatex "crossref" "xdata" "annotation" "abstract" "keywords" "file" "timestamp")
 	(BibTeX "crossref" "annote" "abstract" "keywords" "file" "if" "timestamp" "url" "doi" "issn")))
+
+
 (setq ebib-index-columns
       '( ("Entry Key" 40 t) 
-	("Author/Editor" 10 t)
-	("Year" 6 t)
+	("Author/Editor" 20 t)
+;;	("Year" 6 t)
 	("if" 4 t)
-	("Title" 50 t)
+	("Title" 100 t)
 	))
 (setq ebib-preload-bib-files '("F:/BaiduSyncdisk/Notes/ebib/bib/default.bib"))
 (setq ebib-citation-commands

@@ -3,6 +3,7 @@
 (require 'evil-leader)
 
 (global-set-key (kbd "C-c m") #'major-mode-hydra)
+(evil-leader/set-key "m" #'major-mode-hydra)
 (defun lazy-load-evil-leader-keys (key funcname filename &optional)
   "关联evil的lazyload"
   (evil-leader/set-key key funcname)
@@ -16,12 +17,17 @@
 (lazy-load-evil-leader-keys "t" 'tools-hydra/body "init-tools")
 (lazy-load-evil-leader-keys "w" 'window-hydra/body "init-window")
 (lazy-load-evil-leader-keys "a" 'chatgpt-hydra/body "init-chatgpt")
+(lazy-load-evil-leader-keys "u" 'hydra-undo "init-vundo")
 
 ;; 输入法加载
 (lazy-load-global-keys
  '(("C-\\" . toggle-pyim))
  "init-pyim")
 
+
+(lazy-load-global-keys
+ '(("C-c u" . hydra-undo))
+ "init-vundo")
 
 (lazy-load-global-keys
  '(("C-c a" . chatgpt-hydra/body))
@@ -52,6 +58,9 @@
  '(("<f2>" . xfw-lsp-mode))
  "init-lsp-bridge")
 
+(lazy-load-global-keys
+ '(("<f3>" . elfeed))
+ "init-elfeed")
 (defun lazyload-eshell-setup()
   (require 'init-eshell))
 (add-hook 'eshell-mode-hook 'lazyload-eshell-setup)

@@ -11,7 +11,7 @@
 (require 'pyim-tsinghua-dict)
 
 (setq pyim-page-tooltip '(posframe popup minibuffer))
-(setq pyim-page-style 'one-line)
+(setq pyim-page-style 'two-lines)
 (setq-default pyim-punctuation-translate-p '(no)) ;使用半角标点
 
 (pyim-basedict-enable)

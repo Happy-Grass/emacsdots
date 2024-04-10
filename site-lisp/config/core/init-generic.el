@@ -3,7 +3,6 @@
 ;;; Commentary:
 ;;; Code:
 
-
 ;; Restore emacs session.
 (setq initial-buffer-choice t)
 ;;(run-with-timer 1 nil #'(lambda () (bury-buffer)))
@@ -63,7 +62,7 @@
 
 (global-hl-line-mode)  ;高亮当前行
 ;(menu-bar-bottom-window-divider) ;分离线，下面的
-(fringe-mode '(5 . 0))
+;; 配置fringe-mode
 (show-paren-mode 0)
 (global-eldoc-mode -1)
 (provide 'init-generic)

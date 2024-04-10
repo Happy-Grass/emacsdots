@@ -1,5 +1,5 @@
 (pretty-hydra-define bookmark-hydra
-  (:color amaranth :quit-key "q" :title (pretty-hydra-title "Bookmarks" 'mdicon "nf-md-bookmark_multiple"))
+  (:color amaranth :quit-key ("q" "C-g") :title (pretty-hydra-title "Bookmarks" 'mdicon "nf-md-bookmark_multiple"))
   ("Edit"
    (("c" bookmark-set "bookmark set" :exit t)
     ("d" bookmark-delete "bookmark delete" :exit t)
