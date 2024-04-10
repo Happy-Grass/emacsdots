@@ -380,3 +380,7 @@
 	path = site-lisp/extensions/emacs-fringe-scale
 	url = git@github.com:blahgeek/emacs-fringe-scale.git
 	branch = master
+[submodule "site-lisp/extensions/vundo"]
+	path = site-lisp/extensions/vundo
+	url = git@github.com:casouri/vundo.git
+	branch = master
