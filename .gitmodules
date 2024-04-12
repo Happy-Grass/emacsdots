@@ -392,3 +392,7 @@
 	path = site-lisp/extensions/xenops
 	url = git@github.com:dandavison/xenops.git
 	branch = master
+[submodule "site-lisp/extensions/aio"]
+	path = site-lisp/extensions/aio
+	url = git@github.com:skeeto/emacs-aio.git
+	branch = master
