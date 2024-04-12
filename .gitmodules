@@ -400,3 +400,7 @@
 	path = site-lisp/win_software/emacs-mingw64
 	url = git@github.com:Happy-Grass/mingw64.git
 	branch = master
+[submodule "site-lisp/win_software/emacs-cmake"]
+	path = site-lisp/win_software/emacs-cmake
+	url = git@github.com:Happy-Grass/emacs-cmake.git
+	branch = master
