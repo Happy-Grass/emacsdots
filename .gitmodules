@@ -248,10 +248,6 @@
 	path = site-lisp/extensions/pdf-tools
 	url = git@github.com:vedang/pdf-tools.git
 	branch = master
-[submodule "site-lisp/extensions/epdfinfo-compiled"]
-	path = site-lisp/extensions/epdfinfo-compiled
-	url = git@github.com:Happy-Grass/epdfinfo-windows.git
-	branch = master
 [submodule "site-lisp/extensions/tablist"]
 	path = site-lisp/extensions/tablist
 	url = git@github.com:politza/tablist.git
@@ -403,4 +399,8 @@
 [submodule "site-lisp/win_software/emacs-python"]
 	path = site-lisp/win_software/emacs-python
 	url = git@github.com:Happy-Grass/emacs-python-3.11.8.git
+	branch = master
+[submodule "site-lisp/win_software/epdfinfo"]
+	path = site-lisp/win_software/epdfinfo
+	url = git@github.com:Happy-Grass/epdfinfo-windows.git
 	branch = master
