@@ -388,3 +388,7 @@
 	path = site-lisp/extensions/perspective-el
 	url = git@github.com:nex3/perspective-el.git
 	branch = master
+[submodule "site-lisp/extensions/xenops"]
+	path = site-lisp/extensions/xenops
+	url = git@github.com:dandavison/xenops.git
+	branch = master
