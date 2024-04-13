@@ -424,3 +424,7 @@
 	path = site-lisp/extensions/wgrep
 	url = git@github.com:mhayashi1120/Emacs-wgrep.git
 	branch = master
+[submodule "site-lisp/extensions/shackle"]
+	path = site-lisp/extensions/shackle
+	url = https://depp.brause.cc/shackle.git
+	branch = master
