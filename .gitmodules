@@ -412,3 +412,7 @@
 	path = site-lisp/win_software/emacs-curl
 	url = git@github.com:Happy-Grass/emacs-curl.git
 	branch = master
+[submodule "site-lisp/extensions/projectile"]
+	path = site-lisp/extensions/projectile
+	url = git@github.com:bbatsov/projectile.git
+	branch = master
