@@ -408,3 +408,7 @@
 	path = site-lisp/win_software/ripgrep
 	url = git@github.com:Happy-Grass/ripgrep.git
 	branch = master
+[submodule "site-lisp/win_software/emacs-curl"]
+	path = site-lisp/win_software/emacs-curl
+	url = git@github.com:Happy-Grass/emacs-curl.git
+	branch = master
