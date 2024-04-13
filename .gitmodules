@@ -420,3 +420,7 @@
 	path = site-lisp/extensions/rg
 	url = git@github.com:dajva/rg.el.git
 	branch = master
+[submodule "site-lisp/extensions/wgrep"]
+	path = site-lisp/extensions/wgrep
+	url = git@github.com:mhayashi1120/Emacs-wgrep.git
+	branch = master
