@@ -416,3 +416,7 @@
 	path = site-lisp/extensions/projectile
 	url = git@github.com:bbatsov/projectile.git
 	branch = master
+[submodule "site-lisp/extensions/rg"]
+	path = site-lisp/extensions/rg
+	url = git@github.com:dajva/rg.el.git
+	branch = master
