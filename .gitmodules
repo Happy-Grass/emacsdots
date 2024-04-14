@@ -432,3 +432,7 @@
 	path = site-lisp/extensions/dired-hacks
 	url = git@github.com:Fuco1/dired-hacks.git
 	branch = master
+[submodule "site-lisp/extensions/highlight-indent-guides"]
+	path = site-lisp/extensions/highlight-indent-guides
+	url = git@github.com:DarthFennec/highlight-indent-guides.git
+	branch = master
