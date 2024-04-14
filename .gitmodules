@@ -428,3 +428,7 @@
 	path = site-lisp/extensions/elisp-refs
 	url = git@github.com:Wilfred/elisp-refs.git
 	branch = master
+[submodule "site-lisp/extensions/dired-sidebar"]
+	path = site-lisp/extensions/dired-sidebar
+	url = git@github.com:jojojames/dired-sidebar.git
+	branch = master
