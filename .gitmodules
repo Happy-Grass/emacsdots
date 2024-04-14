@@ -428,3 +428,7 @@
 	path = site-lisp/extensions/shackle
 	url = https://depp.brause.cc/shackle.git
 	branch = master
+[submodule "site-lisp/extensions/helpful"]
+	path = site-lisp/extensions/helpful
+	url = git@github.com:Wilfred/helpful.git
+	branch = master
