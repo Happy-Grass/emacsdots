@@ -2,10 +2,6 @@
 	path = site-lisp/extensions/vs-theme
 	url = git@github.com:Happy-Grass/vs-theme.git
 	branch = master
-[submodule "site-lisp/extensions/lazy-load"]
-	path = site-lisp/extensions/lazy-load
-	url = git@github.com:manateelazycat/lazy-load.git
-	branch = master
 [submodule "site-lisp/extensions/evil"]
 	path = site-lisp/extensions/evil
 	url = git@github.com:emacs-evil/evil.git
@@ -193,10 +189,6 @@
 [submodule "site-lisp/extensions/hydra-posframe"]
 	path = site-lisp/extensions/hydra-posframe
 	url = git@github.com:Ladicle/hydra-posframe.git
-	branch = master
-[submodule "site-lisp/extensions/evil-leader"]
-	path = site-lisp/extensions/evil-leader
-	url = git@github.com:cofi/evil-leader.git
 	branch = master
 [submodule "site-lisp/extensions/emacs-minibuffer-line"]
 	path = site-lisp/extensions/emacs-minibuffer-line
