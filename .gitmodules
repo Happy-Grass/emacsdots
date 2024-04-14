@@ -312,10 +312,6 @@
 	path = site-lisp/extensions/nerd-icons-corfu
 	url = git@github.com:LuigiPiucco/nerd-icons-corfu.git
 	branch = master
-[submodule "site-lisp/extensions/dirvish"]
-	path = site-lisp/extensions/dirvish
-	url = git@github.com:alexluigit/dirvish.git
-	branch = main
 [submodule "site-lisp/extensions/diff-hl"]
 	path = site-lisp/extensions/diff-hl
 	url = git@github.com:dgutov/diff-hl.git
