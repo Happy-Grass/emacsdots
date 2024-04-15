@@ -9,10 +9,18 @@
 (require 'popup nil t)
 (require 'posframe nil t)
 (require 'pyim-tsinghua-dict)
+(require 'pyim-cstring-utils);; 添加中文分词功能
+
 
 (setq pyim-page-tooltip '(posframe popup minibuffer))
 (setq pyim-page-style 'two-lines)
-(setq-default pyim-punctuation-translate-p '(no)) ;使用半角标点
+(setq-default pyim-punctuation-translate-p '(auto)) ;根据输入法自动选取全角半角标点
+
+;;配置pyim翻页的快捷键
+(define-key pyim-mode-map "]" 'pyim-page-next-page)
+(define-key pyim-mode-map "[" 'pyim-page-previous-page)
+(define-key evil-normal-state-map (kbd "b") 'pyim-backward-word)
+(define-key evil-normal-state-map (kbd "w") 'pyim-forward-word)
 
 (pyim-basedict-enable)
 (setq default-input-method "pyim")

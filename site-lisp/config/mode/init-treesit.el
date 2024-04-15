@@ -2,8 +2,6 @@
 ;;; Commentary:
 ;; Config for treesit
 ;;
-
-
 ;;; Require
 (require 'treesit)
 
@@ -43,6 +41,7 @@
         (zig . ("https://github.com/GrayJack/tree-sitter-zig"))))
 
 (setq major-mode-remap-alist
+      (append major-mode-remap-alist
       '((c-mode          . c-ts-mode)
         (c++-mode        . c++-ts-mode)
         (cmake-mode      . cmake-ts-mode)
@@ -54,7 +53,7 @@
         (sh-mode         . bash-ts-mode)
         (typescript-mode . typescript-ts-mode)
         (rust-mode       . rust-ts-mode)
-        ))
+        )))
 
 (add-hook 'markdown-mode-hook #'(lambda () (treesit-parser-create 'markdown)))
 

@@ -1,10 +1,11 @@
 (require 'chatgpt-shell)
 (require 'dall-e-shell)
 (require 'ob-chatgpt-shell)
-
+(require 'init-tools);; enable proxy
+(proxy-socks-enable)
 ;; Add cat to PATH
 (setenv "PATH" (concat "D:/MSYS64/usr/bin;" (getenv "PATH")));; For cat
-(setenv "PATH" (concat "D:/MSYS64/mingw64/bin;" (getenv "PATH")));; For curl
+(setenv "PATH" (concat "D:/MSYS64/mingw64/bin;" (getenv "PATH")));; For cat
 (setq exec-path (split-string (getenv "PATH") ";"))
 
 ;; Read api-key from  txt file

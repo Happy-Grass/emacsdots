@@ -12,9 +12,9 @@
 (require 'olivetti)
 
 ;; 设置宽度方便书写
-(setq olivetti-style "fancy")
-(setq olivetti-body-width 80)
 (add-hook 'org-mode-hook #'olivetti-mode)
+(setq olivetti-style "fancy")
+(setq olivetti-body-width 90)
 ;; 让中文也可以不加空格就使用行内格式
 (setcar (nthcdr 0 org-emphasis-regexp-components) " \t('\"{[:nonascii:]")
 (setcar (nthcdr 1 org-emphasis-regexp-components) "- \t.,:!?;'\")}\\[[:nonascii:]")

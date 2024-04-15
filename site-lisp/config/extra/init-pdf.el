@@ -1,4 +1,4 @@
-(setq pdf-info-epdfinfo-program "~/.emacs.d/site-lisp/extensions/epdfinfo-compiled/epdfinfo.exe")
+(setq pdf-info-epdfinfo-program "~/.emacs.d/site-lisp/win_software/epdfinfo/epdfinfo.exe")
 (require 'pdf-tools)
 (require 'pdf-loader)
 (require 'pdf-occur)
@@ -38,8 +38,8 @@
 
 (major-mode-hydra-define pdf-view-mode
  (:title (pretty-hydra-title "Pdf Commands" 'faicon "nf-fa-file_pdf_o") :color amaranth :quit-key ("q" "C-g"))
- ("Mark"
-  (("a" pdf-annot-add-markup-annotation "annotation" :exit t)
+ ("Edit"
+  (("s" LaTeX-section "section" :exit t)
    ("t" pdf-annot-add-text-annotation "text" :exit t)
    ("d" pdf-annot-delete "delete" :exit t)
    ("l" pdf-annot-list-annotations "list" :exit t))

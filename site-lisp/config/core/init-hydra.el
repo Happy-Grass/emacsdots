@@ -15,11 +15,9 @@
   :lighter " Linum"
   (if line-number-mode
       (progn
-        (menu-bar--display-line-numbers-mode-relative)
-        (message "Line numbers: Relative"))
+        (menu-bar--display-line-numbers-mode-relative))
     (progn
-      (menu-bar--display-line-numbers-mode-none)
-      (message "Line numbers: None"))))
+      (menu-bar--display-line-numbers-mode-none))))
 (add-hook 'prog-mode-hook 'line-number-mode)
 
 (cl-defun pretty-hydra-title (title &optional icon-type icon-name
@@ -62,16 +60,5 @@
    "Emacs"
    (("D" toggle-debug-on-error "debug on error" :toggle (default-value 'debug-on-error))
     ("X" toggle-debug-on-quit "debug on quit" :toggle (default-value 'debug-on-quit)))))
-
-(pretty-hydra-define popper-hydra
-  (:title (pretty-hydra-title "Popper Commands" 'flicon "nf-linux-pop_os") :quit-key "q")
-  ("Basic"
-   (("o" popper-toggle "popper toggle" :exit t)
-   ("c" popper-cycle "popper cycle")
-   ("t" popper-toggle-type "popper toggle type" :exit t))
-   ))
-  
-
-(global-set-key (kbd "C-c p") 'popper-hydra/body)  
 
 (provide 'init-hydra)

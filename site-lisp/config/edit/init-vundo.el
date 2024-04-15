@@ -5,7 +5,8 @@
    (("h" vundo-forward "forward")
     ("l" vundo-backward "backward")
     ("n" vundo-next "next")
-    ("p" vundo-previous "previous"))
+    ("p" vundo-previous "previous")
+    ("<RET>" vundo-confirm "confirm" :exit t))
    "Branch"
     (("a" vundo-stem-root "stem root")
      ("e" vundo-stem-end "stem end"))

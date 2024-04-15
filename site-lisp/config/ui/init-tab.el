@@ -28,6 +28,8 @@ All buffer name start with * will group to \"Emacs\".
 Other buffer group by `centaur-tabs-get-group-name' with project name."
   (list
    (cond
+    ((memq major-mode '(chatgpt-shell-mode shell-mode eshell-mode))
+     "Shell")
     ((or (string-equal "*" (substring (buffer-name) 0 1))
          (memq major-mode '(magit-process-mode
                             magit-status-mode
@@ -38,6 +40,8 @@ Other buffer group by `centaur-tabs-get-group-name' with project name."
                             magit-blame-mode
                             )))
      "Emacs")
+    ((memq major-mode '(latex-mode tex-mode LaTeX-mode))
+     "LaTex")
     ((derived-mode-p 'emacs-lisp-mode)
      "Config")
     ((derived-mode-p 'prog-mode)

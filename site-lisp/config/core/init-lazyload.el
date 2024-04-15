@@ -1,99 +1,60 @@
 ;; before loading init-lazyload, init-evil.el must be loaded first
-(require 'lazy-load)
-(require 'evil-leader)
+;; preload function names
+(autoload 'help-hydra/body "init-help" nil t)
+(autoload 'ebib "init-ebib" nil t)
+(autoload 'bookmark-hydra/body "init-bookmark" nil t)
+(autoload 'projectile-hydra/body "init-projectile" nil t)
+(autoload 'hydra-undo "init-vundo" nil t)
+(autoload 'org-roam-hydra/body "init-org" nil t)
+(autoload 'vc-hydra/body "init-vc" nil t)
+(autoload 'chatgpt-hydra/body "init-chatgpt" nil t)
+(autoload 'window-hydra/body "init-window" nil t)
+(autoload 'tools-hydra/body "init-tools" nil t)
+(autoload 'perspective-hydra/body "init-perspective" nil t)
+(autoload 'find-hydra/body "init-find" nil t)
+(autoload 'toggle-pyim "init-pyim" nil t)
+(autoload 'elfeed "init-elfeed" nil t)
+(autoload 'xfw-lsp-mode "init-lsp-bridge" nil t)
 
-(global-set-key (kbd "C-c m") #'major-mode-hydra)
-(evil-leader/set-key "m" #'major-mode-hydra)
-(defun lazy-load-evil-leader-keys (key funcname filename &optional)
-  "关联evil的lazyload"
-  (evil-leader/set-key key funcname)
-  (autoload funcname filename nil t))
-
-(lazy-load-evil-leader-keys "n" 'org-roam-hydra/body "init-org")
-(lazy-load-evil-leader-keys "b" 'bookmark-hydra/body "init-bookmark")
-(lazy-load-evil-leader-keys "v" 'vc-hydra/body "init-vc")
-(lazy-load-evil-leader-keys "e" 'ebib "init-ebib")
-(lazy-load-evil-leader-keys "f" 'find-hydra/body "init-find")
-(lazy-load-evil-leader-keys "t" 'tools-hydra/body "init-tools")
-(lazy-load-evil-leader-keys "w" 'window-hydra/body "init-window")
-(lazy-load-evil-leader-keys "a" 'chatgpt-hydra/body "init-chatgpt")
-(lazy-load-evil-leader-keys "u" 'hydra-undo "init-vundo")
-
-;; 输入法加载
-(lazy-load-global-keys
- '(("C-\\" . toggle-pyim))
- "init-pyim")
-
-
-(lazy-load-global-keys
- '(("C-c u" . hydra-undo))
- "init-vundo")
-
-(lazy-load-global-keys
- '(("C-c a" . chatgpt-hydra/body))
- "init-chatgpt")
-
-(lazy-load-global-keys
- '(("C-c e" . ebib))
- "init-ebib")
-
-(lazy-load-global-keys
- '(("C-c n" . org-roam-hydra/body))
- "init-org")
-
-(lazy-load-global-keys
- '(("C-c t" . tools-hydra/body))
- "init-tools")
-
-(lazy-load-global-keys
- '(("C-c w" . window-hydra/body))
- "init-window")
-
-;; 快捷选项,加载的文件还需要配置
-(lazy-load-global-keys
- '(("<f1>" . global-toggles/body))
- "init-hydra")
-
-(lazy-load-global-keys
- '(("<f2>" . xfw-lsp-mode))
- "init-lsp-bridge")
-
-(lazy-load-global-keys
- '(("<f3>" . elfeed))
- "init-elfeed")
-(defun lazyload-eshell-setup()
-  (require 'init-eshell))
-(add-hook 'eshell-mode-hook 'lazyload-eshell-setup)
+;; short key
+(pretty-hydra-define global-hydra
+ (:title (pretty-hydra-title "Global Commands" 'faicon "nf-fa-globe") :quit-key ("q" "C-g"))
+  ("Manager"
+   (("e" ebib "ebib" :exit t)
+    ("b" bookmark-hydra/body "bookmark" :exit t)
+    ("v" vc-hydra/body "git" :exit t)
+    ("f" find-hydra/body "find" :exit t)
+    ("s" perspective-hydra/body "session" :exit t)
+    ("p" projectile-hydra/body "projectile" :exit t))
+   "Edit"
+   (
+    ("m" major-mode-hydra "major" :exit t)
+    ("n" org-roam-hydra/body "roam" :exit t)
+    ("t" tools-hydra/body "tools" :exit t)
+    ("u" hydra-undo "undo" :exit t))
+   "Shell"
+   (("a" chatgpt-hydra/body "chatgpt" :exit t))
+   "Window"
+   (("w" window-hydra/body "window" :exit t)
+    ("o" popper-hydra/body "popper" :exit t))
+   ))
 
 
-(defun lazyload-python-setup()
-  (require 'init-python))
+(global-set-key (kbd "C-h") 'help-hydra/body)
+(global-set-key (kbd "C-\\") 'toggle-pyim)
+(global-set-key (kbd "C-,") 'global-hydra/body)
+(global-set-key (kbd "<f1>") 'global-toggles/body)
+(global-set-key (kbd "<f2>") 'xfw-lsp-mode)
+(global-set-key (kbd "<f3>") 'elfeed)
 
-(defvar auctex-loadp nil)
-(defun auctex-lazyload()
-  (if (not auctex-loadp)
-      (progn
-	(require 'init-tex)
-	(setq auctex-loadp t)
-	(message "init-tex.el loaded"))
-    (message "init-tex.el has been loaded, nothing to do！"))
-  )
+(define-key evil-normal-state-map (kbd ",") 'global-hydra/body)
 
-;; 将 pdf-view-mode 设置为默认的 PDF 查看模式
-(defun xfw-pdf-hook ()  
-  (when (string-match "\\.pdf\\'" (buffer-file-name))  
-    (require 'init-pdf)
-    )) 
+(add-hook 'eshell-mode-hook #'(lambda () (require 'init-eshell)))
+(add-hook 'prog-mode-hook #'(lambda () (progn (require 'init-indent) (highlight-indent-guides-mode))))
 
-(defun xfw-org-hook ()  
-  (when (string-match "\\.org\\'" (buffer-file-name))  
-    (require 'init-org))) 
-(add-hook 'find-file-hook 'xfw-pdf-hook)
-(add-hook 'find-file-hook 'xfw-org-hook)
-;;(add-hook 'python-mode-hook 'lazyload-python-setup)
-;;(add-hook 'python-ts-mode-hook 'lazyload-python-setup)
-(add-hook 'tex-mode-hook 'auctex-lazyload)
-(add-hook 'latex-mode-hook 'auctex-lazyload)
-
+(setq major-mode-remap-alist
+      '((latex-mode . (lambda () (progn (require 'init-tex) (LaTeX-mode))))
+	(org-mode . (lambda () (progn (require 'init-org) (org-mode))))
+	(doc-view-mode-maybe . (lambda () (progn (require 'init-pdf) (pdf-view-mode))))))
 
 (provide 'init-lazyload)

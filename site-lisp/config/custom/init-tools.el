@@ -79,25 +79,50 @@
 (add-hook 'dired-mode-hook 'org-download-enable)
 ;; Show images in posframe
 
+;;(defun org-showlink-image ()  
+  ;;"使用posframe显示图片"  
+  ;;(interactive)  
+  ;;(let* ((link (org-element-context))  
+         ;;(path (and (org-element-type link)  
+                    ;;(org-element-property :path link)))  
+         ;;(image-file (and path (expand-file-name path)))  
+         ;;(image-buffer (get-buffer-create "*Image Viewer")))  
+;;
+    ;;(with-current-buffer image-buffer
+      ;;(erase-buffer)
+      ;;(insert-image-file image-file))
+    ;;(posframe-show image-buffer
+		   ;;:position (point)
+		   ;;:mim-width 40
+		   ;;:min-height 10
+		   ;;:internal-border-width 1
+		   ;;:poshandler 'posframe-poshandler-window-top-right-corner
+		   ;;:internal-border-color "red")))
+
 (defun org-showlink-image ()  
   "使用posframe显示图片"  
   (interactive)  
   (let* ((link (org-element-context))  
          (path (and (org-element-type link)  
                     (org-element-property :path link)))  
+	(screen-width (* (frame-pixel-width) 2.0)) ;; 系统缩放比例为2.0
          (image-file (and path (expand-file-name path)))  
-         (image-buffer (get-buffer-create "*Image Viewer")))  
-
+         (image-buffer (get-buffer-create "*Image Viewer"))
+         (target-width (* screen-width 0.4)) ;; frame的0.4倍宽度
+         (image-size (image-size (create-image image-file) t))
+         (scale (if image-size (/  target-width (car image-size)) 1.0)))
     (with-current-buffer image-buffer
       (erase-buffer)
-      (insert-image-file image-file))
+      (insert-image (create-image image-file nil nil :scale scale)))  ; 使用计算出的缩放比例来插入图像
     (posframe-show image-buffer
-		   :position (point)
-		   :mim-width 40
-		   :min-height 10
-		   :internal-border-width 1
-		   :poshandler 'posframe-poshandler-window-top-right-corner
-		   :internal-border-color "red")))
+                   :position (point)
+                   :min-width 40
+                   :min-height 10
+                   :internal-border-width 1
+                   :poshandler 'posframe-poshandler-window-top-center
+                   :internal-border-color "red")))
+
+
 (defun delete-showed-image ()
   "posframe不会自动删除,使用这个手动删除"
   (interactive)

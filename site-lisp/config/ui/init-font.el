@@ -29,7 +29,7 @@
              when (font-installed-p font)
              return (set-face-attribute 'default nil
                                         :family font
-                                        :height 100))
+                                        :height 125))
 
     ;; Set mode-line font
      ;;(cl-loop for font in '("Menlo" "SF Pro Display" "Helvetica")

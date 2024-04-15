@@ -29,13 +29,13 @@
   (require 'init-generic)
   (require 'init-remote)
   (require 'init-vertico)
-  (require 'init-popper)
+
   
 
   (require 'doom-themes)
   (setq doom-themes-enable-bold t
 	doom-themes-enable-italic t)
-  (load-theme 'doom-tokyo-night t)
+  (load-theme 'doom-moonlight t)
   (require 'init-diff-hl)
   (require 'init-modeline)
   (require 'init-tab)
@@ -46,11 +46,13 @@
 
   (require 'init-evil)
   (require 'init-hydra);; must load before init-lazyload
+  (require 'init-popper)
   (require 'init-lazyload)
   (require 'init-setting)
   (require 'init-treesit)
   (require 'init-env)
   (require 'init-ace)
+  (require 'init-color)
   ;(require 'init-eaf)
   ;(require 'init-tools)
   ;(require 'init-color)

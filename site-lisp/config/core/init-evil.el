@@ -1,7 +1,4 @@
-(require 'evil-leader)
 (require 'evil-find-char-pinyin)
-(evil-leader/set-leader ",")
-(global-evil-leader-mode)
 (evil-mode 1)
 (evil-find-char-pinyin-mode +1) ;; evil-mode的f/F/t/T支持拼音模式
 (evil-set-initial-state 'ebib-index-mode 'emacs)

@@ -2,11 +2,7 @@
 
 ;;; Commentary:
 ;;; Code:
-
-;; Restore emacs session.
-(setq initial-buffer-choice t)
-;;(run-with-timer 1 nil #'(lambda () (bury-buffer)))
-
+(setq initial-major-mode 'fundamental-mode)
 ;; 增加长行处理性能
 (setq bidi-inhibit-bpa t)
 (setq-default bidi-paragraph-direction 'left-to-right)
@@ -24,7 +20,6 @@
 (setq initial-scratch-message "") ;关闭启动空白buffer, 这个buffer会干扰session恢复
 (setq-default comment-style 'indent)    ;设定自动缩进的注释风格
 (setq ring-bell-function 'ignore)       ;关闭烦人的出错时的提示声
-(setq default-major-mode 'text-mode)    ;设置默认地主模式为TEXT模式
 (setq mouse-yank-at-point t)            ;粘贴于光标处,而不是鼠标指针处
 (setq x-select-enable-clipboard t)      ;支持emacs和外部程序的粘贴
 ;;(setq split-width-threshold nil)        ;分屏的时候使用上下分屏
@@ -53,6 +48,8 @@
 (set-selection-coding-system 'utf-8)
 (modify-coding-system-alist 'process "*" 'utf-8)
 (setq default-process-coding-system '(utf-8 . utf-8))
+(set-default 'process-coding-system-alist
+             '(("[cC][mM][dD][pP][rR][oO][xX][yY]" utf-8 . gbk-dos))) ;; 路径中文编码问题
 (setq-default pathname-coding-system 'utf-8)
 (set-file-name-coding-system 'utf-8)
 ;; 平滑地进行半屏滚动，避免滚动后recenter操作

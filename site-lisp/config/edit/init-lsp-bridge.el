@@ -6,7 +6,7 @@
 ;; 指定语言使用的服务器
 (setq lsp-bridge-python-lsp-server "pyright")
 (setq lsp-bridge-user-langserver-dir "~/.emacs.d/site-lisp/lsp-config")
-(setq lsp-bridge-python-command "~/.emacs.d/site-lisp/extensions/emacs-python/python.exe")
+(setq lsp-bridge-python-command "~/.emacs.d/site-lisp/win_software/emacs-python/python.exe")
 
 (setq lsp-bridge-enable-completion-in-minibuffer t)
 (setq lsp-bridge-enable-hover-diagnostic t)
@@ -28,11 +28,6 @@
                   (when (search-forward-regexp (regexp-quote "from \"https://deno.land") nil t)
                     (return "deno")))))))))
 
-;; Support jump to define of EAF root from EAF application directory.
-(setq lsp-bridge-get-project-path-by-filepath
-      (lambda (filepath)
-        (when (string-prefix-p (expand-file-name "~/.emacs.d/site-lisp/extensions/emacs-application-framework/app") filepath)
-          (expand-file-name "~/.emacs.d/site-lisp/extensions/emacs-application-framework/"))))
 
 (defun xfw-lsp-mode()
   (interactive)

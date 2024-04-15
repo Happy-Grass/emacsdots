@@ -8,7 +8,7 @@
 (setq initial-environment nil)         ;Clear the environmental path from parent process
 (setq exec-path nil)
 (setenv "PATH" "")
-;(setq-default mode-line-format nil)    ;Don't show the default modeline
+
 (defun add-subdirs-to-load-path (search-dir)
   (interactive)
   (let* ((dir (file-name-as-directory search-dir)))
@@ -21,7 +21,7 @@
                    (not (file-directory-p (concat dir subdir)))
                    ;; 父目录、 语言相关和版本控制目录都移除
                    (member subdir '("." ".."
-                                    "dist" "node_modules" "__pycache__"
+                                    "dist" "node_modules" "__pycache__" "test" "win_software"
                                     "RCS" "CVS" "rcs" "cvs" ".git" ".github"))))
               (directory-files dir)))
       (let ((subdir-path (concat dir (file-name-as-directory subdir))))
@@ -40,5 +40,6 @@
         (add-subdirs-to-load-path subdir-path)))))
 
 (add-subdirs-to-load-path "~/.emacs.d/site-lisp")
+
 (require 'init)
 ;;; site-start.el ends here.
