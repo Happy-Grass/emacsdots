@@ -29,9 +29,6 @@
   (require 'init-generic)
   (require 'init-remote)
   (require 'init-vertico)
-
-  
-
   (require 'doom-themes)
   (setq doom-themes-enable-bold t
 	doom-themes-enable-italic t)
@@ -50,7 +47,7 @@
   (require 'init-lazyload)
   (require 'init-setting)
   (require 'init-treesit)
-  (require 'init-env)
+  ;(require 'init-env)
   (require 'init-ace)
   (require 'init-color)
   ;(require 'init-eaf)

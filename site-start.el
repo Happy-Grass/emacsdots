@@ -5,9 +5,9 @@
 (scroll-bar-mode 0)                    ;Disable scroll bar
 
 ;; Scratch init
-(setq initial-environment nil)         ;Clear the environmental path from parent process
-(setq exec-path nil)
-(setenv "PATH" "")
+;;(setq initial-environment nil)         ;Clear the environmental path from parent process
+;;(setq exec-path nil)
+;;(setenv "PATH" "")
 
 (defun add-subdirs-to-load-path (search-dir)
   (interactive)
