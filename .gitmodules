@@ -436,3 +436,7 @@
 	path = site-lisp/extensions/highlight-indent-guides
 	url = git@github.com:DarthFennec/highlight-indent-guides.git
 	branch = master
+[submodule "site-lisp/extensions/git-gutter"]
+	path = site-lisp/extensions/git-gutter
+	url = git@github.com:emacsorphanage/git-gutter.git
+	branch = master
