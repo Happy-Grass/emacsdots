@@ -11,7 +11,8 @@
 (require 'pyim-tsinghua-dict)
 (require 'pyim-cstring-utils);; 添加中文分词功能
 
-
+;; 使用百度云拼音
+(setq pyim-cloudim 'baidu)
 (setq pyim-page-tooltip '(posframe popup minibuffer))
 (setq pyim-page-style 'two-lines)
 (setq-default pyim-punctuation-translate-p '(auto)) ;根据输入法自动选取全角半角标点
