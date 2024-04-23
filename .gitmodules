@@ -440,3 +440,7 @@
 	path = site-lisp/extensions/git-gutter
 	url = git@github.com:emacsorphanage/git-gutter.git
 	branch = master
+[submodule "site-lisp/extensions/emacs-which-key"]
+	path = site-lisp/extensions/emacs-which-key
+	url = git@github.com:justbur/emacs-which-key.git
+	branch = master
