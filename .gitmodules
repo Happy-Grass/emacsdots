@@ -444,7 +444,7 @@
 	path = site-lisp/extensions/emacs-which-key
 	url = git@github.com:justbur/emacs-which-key.git
 	branch = master
-[submodule "site-lisp/extensions/emacs-clangd-windows"]
-	path = site-lisp/extensions/emacs-clangd-windows
+[submodule "site-lisp/win_software/emacs-clangd-windows"]
+	path = site-lisp/win_software/emacs-clangd-windows
 	url = git@github.com:Happy-Grass/emacs-clangd-windows.git
 	branch = master
