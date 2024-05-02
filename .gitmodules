@@ -448,3 +448,7 @@
 	path = site-lisp/win_software/emacs-clangd-windows
 	url = git@github.com:Happy-Grass/emacs-clangd-windows.git
 	branch = master
+[submodule "site-lisp/win_software/emacs-msys2"]
+	path = site-lisp/win_software/emacs-msys2
+	url = git@github.com:Happy-Grass/emacs-msys2.git
+	branch = master
