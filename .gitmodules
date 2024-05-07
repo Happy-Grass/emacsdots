@@ -460,7 +460,3 @@
 	path = site-lisp/extensions/emacs-application-framework
 	url = git@github.com:emacs-eaf/emacs-application-framework.git
 	branch = master
-[submodule "site-lisp/win_software/python"]
-	path = site-lisp/win_software/python
-	url = git@github.com:Happy-Grass/emacs-python.git
-	branch = eaf
