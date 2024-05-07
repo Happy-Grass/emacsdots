@@ -18,3 +18,10 @@ git clone --depth=1 -b master https://github.com/emacs-eaf/emacs-application-fra
 cd emacs-application-framework
 python install-eaf.py
 ```
+## NPM
+nodes was wrapped in "~/.emacs.d/site-lisp/win_software/nodejs"
+```bash
+# run `npm --version` in emacs shell to verify the npm working well
+# if used lsp-bridge for python
+npm install -g pyright
+```
