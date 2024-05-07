@@ -452,3 +452,7 @@
 	path = site-lisp/win_software/emacs-msys2
 	url = git@github.com:Happy-Grass/emacs-msys2.git
 	branch = master
+[submodule "site-lisp/win_software/nodejs"]
+	path = site-lisp/win_software/nodejs
+	url = git@github.com:Happy-Grass/emacs-nodejs.git
+	branch = master
