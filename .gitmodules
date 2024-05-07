@@ -456,3 +456,7 @@
 	path = site-lisp/win_software/nodejs
 	url = git@github.com:Happy-Grass/emacs-nodejs.git
 	branch = master
+[submodule "site-lisp/extensions/emacs-application-framework"]
+	path = site-lisp/extensions/emacs-application-framework
+	url = git@github.com:emacs-eaf/emacs-application-framework.git
+	branch = master
