@@ -14,7 +14,8 @@
 ;; 设置宽度方便书写
 (add-hook 'org-mode-hook #'olivetti-mode)
 (setq olivetti-style "fancy")
-(setq olivetti-body-width 90)
+(setq-default olivetti-body-width 90)
+(setq-default fill-column 80)
 ;; 让中文也可以不加空格就使用行内格式
 (setcar (nthcdr 0 org-emphasis-regexp-components) " \t('\"{[:nonascii:]")
 (setcar (nthcdr 1 org-emphasis-regexp-components) "- \t.,:!?;'\")}\\[[:nonascii:]")
@@ -23,14 +24,14 @@
 ;;自定义强调格式
 
 ;; 自动展开缩写连接
-(setq org-appear-autoemphasis t)
-(setq org-appear-autolinks t)
-(setq org-appear-autosubmarkers t)
-(setq org-appear-autoentities t)
-(setq org-appear-autokeywords t)
-
-(add-hook 'org-mode-hook 'org-appear-mode)
-(setq org-appear-trigger 'always)
+;;(setq org-appear-autoemphasis t)
+;;(setq org-appear-autolinks t)
+;;(setq org-appear-autosubmarkers t)
+;;(setq org-appear-autoentities t)
+;;(setq org-appear-autokeywords t)
+;;
+;;(add-hook 'org-mode-hook 'org-appear-mode)
+;;(setq org-appear-trigger 'always)
 
 ;;UI, org-modern
 ;; Activate org-modern-mode for per buffer
@@ -349,5 +350,8 @@ prepended to the element after the #+HEADER: tag."
                       ("\\.mm\\'" . default)
                       ("\\.x?html?\\'" . default)
                       ("\\.pdf\\'" . emacs)))
+(eval-after-load 'org
+  '(progn
+     (define-key org-mode-map (kbd "C-,") nil)))
 (provide 'init-org)
 ;;; init-org.el ends here.

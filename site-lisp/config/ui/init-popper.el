@@ -22,6 +22,7 @@
         "^\\*terminal.*\\*.*$"     term-mode
         "^\\*vterm[inal]*.*\\*.*$" vterm-mode
         "^\\*Edit*"      
+        "\\*elfeed-entry\\*"
 	chatgpt-shell-mode
         ))
 

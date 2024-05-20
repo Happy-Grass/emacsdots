@@ -39,7 +39,7 @@
 (major-mode-hydra-define pdf-view-mode
  (:title (pretty-hydra-title "Pdf Commands" 'faicon "nf-fa-file_pdf_o") :color amaranth :quit-key ("q" "C-g"))
  ("Edit"
-  (("s" LaTeX-section "section" :exit t)
+  (("a" pdf-annot-add-markup-annotation "annotate" :exit t)
    ("t" pdf-annot-add-text-annotation "text" :exit t)
    ("d" pdf-annot-delete "delete" :exit t)
    ("l" pdf-annot-list-annotations "list" :exit t))

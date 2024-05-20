@@ -1,4 +1,5 @@
 (require 'magit)
+(setq magit-git-executable "D:/GreenSoftware/Scoop/apps/git/current/bin/git.exe")
 (pretty-hydra-define vc-hydra
   (:color amaranth :quit-key "q" :title (pretty-hydra-title "Version Control" 'faicon "nf-fa-github_alt"))
   ("Directory"

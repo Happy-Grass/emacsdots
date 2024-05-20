@@ -1,16 +1,18 @@
-(require 'init-python-path)
-(setq eaf-python-command "~/.emacs.d/site-lisp/extensions/emacs-python/python.exe")
+(setenv "PYTHONUSERBASE" (concat (expand-file-name "~") "/.emacs.d/site-lisp/win_software/python-packages"))
+(setq eaf-python-command (concat (expand-file-name "~") "/.emacs.d/site-lisp/win_software/python-eaf/python.exe"))
+(setq frame-title-format "Emacs")
 
-(require 'eaf);; Need wmctrl
+;; 使用这个环境的pip
+(setenv "PATH" (concat (expand-file-name "~") "/.emacs.d/site-lisp/win_software/python-eaf/Scripts;" (getenv "PATH")))
+(setq exec-path (split-string (getenv "PATH") ";"))
+(require 'eaf)
+(require 'eaf-pdf-viewer)
+(require 'eaf-git)
+(require 'eaf-pyqterminal)
+(setq eaf-pdf-dark-mode nil)
 (require 'eaf-browser)
-
-
-
-(setq holo-layer-python-command "~/.emacs.d/site-lisp/extensions/emacs-python/python.exe")
-(require 'holo-layer)
-(setq holo-layer-enable-indent-rainbow t
-      holo-layer-hide-mode-line t)
-(holo-layer-enable)
+(setq eaf-webengine-default-zoom 2.0)
+(require 'eaf-rss-reader)
 (provide 'init-eaf)
 
 

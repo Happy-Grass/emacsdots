@@ -13,3 +13,4 @@
 !/site-lisp/snippets
 !/site-lisp/lsp-config
 !/site-lisp/win_software
+/site-lisp/win_software/python-packages
