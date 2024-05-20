@@ -464,3 +464,7 @@
 	path = site-lisp/win_software/nodejs
 	url = git@github.com:Happy-Grass/emacs-nodejs.git
 	branch = master
+[submodule "site-lisp/extensions/aweshell"]
+	path = site-lisp/extensions/aweshell
+	url = git@github.com:manateelazycat/aweshell.git
+	branch = master
